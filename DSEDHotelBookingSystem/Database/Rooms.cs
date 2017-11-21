@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DSEDHotelBookingSystem.Database
 {
@@ -144,6 +145,39 @@ namespace DSEDHotelBookingSystem.Database
                 room.RoomTypeIDFK = this.RoomType;
 
                 context.SaveChanges();
+            }
+        }
+
+        public void DeleteRoom()
+        {
+
+            // Our stanard using statement passing all the data to context
+
+            string name = RoomName;
+
+            if (MessageBox.Show("Do you REALLY want to delete " + name + "?", "Delete Record",
+                    MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                return;
+            }
+            try
+            {
+                using (var context = new HotelEntities())
+                {
+                    // Select the row you want to delete
+                    int id = RoomID;
+                    var room = (from r in context.Rooms where r.RoomID == id select r).SingleOrDefault();
+
+                    // run remove command
+                    context.Rooms.Remove(room);
+
+                    // Save the changes
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Room has already been deleted or another error has occured" + e);
             }
         }
     }

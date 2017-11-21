@@ -186,6 +186,21 @@ namespace DSEDHotelBookingSystem
             Reset();
         }
 
+        private void btnDeleteRoom_Click(object sender, EventArgs e)
+        {
+            NewRoomValues();
+            myRooms.DeleteRoom();
+            ComboboxViewRoomsSelected();
+            Reset();
+        }
+
+        private void btnResetRoom_Click(object sender, EventArgs e)
+        {
+            NewRoomValues();
+            ComboboxViewRoomsSelected();
+            Reset();
+        }
+
         private void NewRoomValues()
         {
             myRooms.RoomID = Convert.ToInt32(lblRoomID.Text);
@@ -213,6 +228,7 @@ namespace DSEDHotelBookingSystem
         #region Reset
         private void Reset()
         {
+            lblRoomID.Text = "";
             txtRoomName.Text = "";
             txtRoomCost.Text = "";
             nudQueenBed.Text = "0";

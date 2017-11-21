@@ -122,7 +122,7 @@
             this.hotelDataSet3 = new DSEDHotelBookingSystem.HotelDataSet3();
             this.label37 = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnResetRoom = new System.Windows.Forms.Button();
             this.btnNewRoom = new System.Windows.Forms.Button();
             this.btnDeleteRoom = new System.Windows.Forms.Button();
             this.btnEditRoom = new System.Windows.Forms.Button();
@@ -138,6 +138,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.dgvRooms = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblRoomID = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cbxViewRooms = new System.Windows.Forms.ComboBox();
             this.roomTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -148,7 +149,6 @@
             this.roomTypeTableAdapter1 = new DSEDHotelBookingSystem.HotelDataSet1TableAdapters.RoomTypeTableAdapter();
             this.roomTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.roomTypeTableAdapter2 = new DSEDHotelBookingSystem.HotelDataSet3TableAdapters.RoomTypeTableAdapter();
-            this.lblRoomID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -1194,7 +1194,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel11.Controls.Add(this.button1, 3, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btnResetRoom, 3, 0);
             this.tableLayoutPanel11.Controls.Add(this.btnNewRoom, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.btnDeleteRoom, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.btnEditRoom, 1, 0);
@@ -1206,16 +1206,17 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(440, 136);
             this.tableLayoutPanel11.TabIndex = 11;
             // 
-            // button1
+            // btnResetRoom
             // 
-            this.button1.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.reset;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(333, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 130);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnResetRoom.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.reset;
+            this.btnResetRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnResetRoom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnResetRoom.Location = new System.Drawing.Point(333, 3);
+            this.btnResetRoom.Name = "btnResetRoom";
+            this.btnResetRoom.Size = new System.Drawing.Size(104, 130);
+            this.btnResetRoom.TabIndex = 11;
+            this.btnResetRoom.UseVisualStyleBackColor = true;
+            this.btnResetRoom.Click += new System.EventHandler(this.btnResetRoom_Click);
             // 
             // btnNewRoom
             // 
@@ -1239,6 +1240,7 @@
             this.btnDeleteRoom.Size = new System.Drawing.Size(104, 130);
             this.btnDeleteRoom.TabIndex = 10;
             this.btnDeleteRoom.UseVisualStyleBackColor = true;
+            this.btnDeleteRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
             // 
             // btnEditRoom
             // 
@@ -1397,6 +1399,15 @@
             this.panel6.Size = new System.Drawing.Size(1113, 36);
             this.panel6.TabIndex = 5;
             // 
+            // lblRoomID
+            // 
+            this.lblRoomID.AutoSize = true;
+            this.lblRoomID.Location = new System.Drawing.Point(308, 13);
+            this.lblRoomID.Name = "lblRoomID";
+            this.lblRoomID.Size = new System.Drawing.Size(41, 13);
+            this.lblRoomID.TabIndex = 13;
+            this.lblRoomID.Text = "label38";
+            // 
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1457,15 +1468,6 @@
             // roomTypeTableAdapter2
             // 
             this.roomTypeTableAdapter2.ClearBeforeFill = true;
-            // 
-            // lblRoomID
-            // 
-            this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(308, 13);
-            this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(41, 13);
-            this.lblRoomID.TabIndex = 13;
-            this.lblRoomID.Text = "label38";
             // 
             // Form1
             // 
@@ -1655,7 +1657,7 @@
         private HotelDataSet1 hotelDataSet1;
         private System.Windows.Forms.BindingSource roomTypeBindingSource1;
         private HotelDataSet1TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnResetRoom;
         private System.Windows.Forms.BindingSource roomTypeBindingSource2;
         private HotelDataSet3 hotelDataSet3;
         private System.Windows.Forms.BindingSource roomTypeBindingSource3;
