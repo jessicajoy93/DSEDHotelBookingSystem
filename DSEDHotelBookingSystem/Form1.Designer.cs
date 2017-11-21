@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -1363,23 +1363,23 @@
             // dgvRooms
             // 
             this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRooms.Location = new System.Drawing.Point(3, 3);
             this.dgvRooms.Name = "dgvRooms";
@@ -1401,12 +1401,11 @@
             // 
             // lblRoomID
             // 
-            this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(308, 13);
+            this.lblRoomID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblRoomID.Location = new System.Drawing.Point(308, 5);
             this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(41, 13);
+            this.lblRoomID.Size = new System.Drawing.Size(71, 26);
             this.lblRoomID.TabIndex = 13;
-            this.lblRoomID.Text = "label38";
             // 
             // label18
             // 
@@ -1534,7 +1533,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).EndInit();

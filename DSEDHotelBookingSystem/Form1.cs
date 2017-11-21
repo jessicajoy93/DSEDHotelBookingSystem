@@ -180,7 +180,9 @@ namespace DSEDHotelBookingSystem
         private void btnEditRoom_Click(object sender, EventArgs e)
         {
             NewRoomValues();
+
             myRooms.UpdateRoom();
+
             ComboboxViewRoomsSelected();
 
             Reset();
@@ -188,10 +190,19 @@ namespace DSEDHotelBookingSystem
 
         private void btnDeleteRoom_Click(object sender, EventArgs e)
         {
-            NewRoomValues();
-            myRooms.DeleteRoom();
-            ComboboxViewRoomsSelected();
-            Reset();
+            try
+            {
+                NewRoomValues();
+                RoomID();
+                myRooms.DeleteRoom();
+                ComboboxViewRoomsSelected();
+                Reset();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a room before deleting\n\n" + ex);
+            }
+
         }
 
         private void btnResetRoom_Click(object sender, EventArgs e)
@@ -201,9 +212,14 @@ namespace DSEDHotelBookingSystem
             Reset();
         }
 
-        private void NewRoomValues()
+        private void RoomID()
         {
             myRooms.RoomID = Convert.ToInt32(lblRoomID.Text);
+        }
+
+        private void NewRoomValues()
+        {
+
             myRooms.RoomName = txtRoomName.Text;
             myRooms.SingleBeds = Convert.ToInt32(nudSingleBed.Text);
             myRooms.QueenBeds = Convert.ToInt32(nudQueenBed.Text);

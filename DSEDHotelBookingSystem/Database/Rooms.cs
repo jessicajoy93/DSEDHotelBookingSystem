@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DSEDHotelBookingSystem.Database
@@ -134,15 +131,15 @@ namespace DSEDHotelBookingSystem.Database
         {
             using (var context = new HotelEntities())
             {
-                var query = from r in context.Rooms where r.RoomID == this.RoomID select r;
+                var query = from r in context.Rooms where r.RoomID == RoomID select r;
 
                 var room = query.FirstOrDefault(); //gets the first one
-                room.Room_Name = this.RoomName;
-                room.Single_Beds = this.SingleBeds;
-                room.Queen_Beds = this.QueenBeds;
-                room.Sleeps = this.Sleeps;
-                room.Cost = this.Cost;
-                room.RoomTypeIDFK = this.RoomType;
+                room.Room_Name = RoomName;
+                room.Single_Beds = SingleBeds;
+                room.Queen_Beds = QueenBeds;
+                room.Sleeps = Sleeps;
+                room.Cost = Cost;
+                room.RoomTypeIDFK = RoomType;
 
                 context.SaveChanges();
             }
@@ -166,7 +163,7 @@ namespace DSEDHotelBookingSystem.Database
                 {
                     // Select the row you want to delete
                     int id = RoomID;
-                    var room = (from r in context.Rooms where r.RoomID == id select r).SingleOrDefault();
+                    var room = (from r in context.Rooms where r.RoomID == RoomID select r).SingleOrDefault();
 
                     // run remove command
                     context.Rooms.Remove(room);
@@ -177,7 +174,7 @@ namespace DSEDHotelBookingSystem.Database
             }
             catch (Exception e)
             {
-                MessageBox.Show("Room has already been deleted or another error has occured" + e);
+                MessageBox.Show("Room has already been deleted or another error has occured\n\n" + e);
             }
         }
     }
