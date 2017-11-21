@@ -9,6 +9,7 @@ namespace DSEDHotelBookingSystem.Database
 {
     class Rooms
     {
+        public int RoomID { get; set; }
         public string RoomName { get; set; }
         public int SingleBeds { get; set; }
         public int QueenBeds { get; set; }
@@ -124,6 +125,24 @@ namespace DSEDHotelBookingSystem.Database
                 r.RoomTypeIDFK = RoomType;
 
                 context.Rooms.Add(r);
+                context.SaveChanges();
+            }
+        }
+
+        public void UpdateRoom()
+        {
+            using (var context = new HotelEntities())
+            {
+                var query = from r in context.Rooms where r.RoomID == this.RoomID select r;
+
+                var room = query.FirstOrDefault(); //gets the first one
+                room.Room_Name = this.RoomName;
+                room.Single_Beds = this.SingleBeds;
+                room.Queen_Beds = this.QueenBeds;
+                room.Sleeps = this.Sleeps;
+                room.Cost = this.Cost;
+                room.RoomTypeIDFK = this.RoomType;
+
                 context.SaveChanges();
             }
         }

@@ -143,6 +143,12 @@ namespace DSEDHotelBookingSystem
         #region Combobox View Rooms Selected Index Changed
         private void cbxViewRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ComboboxViewRoomsSelected();
+
+        }
+
+        private void ComboboxViewRoomsSelected()
+        {
             if (cbxViewRooms.SelectedItem == "All Rooms")
             {
                 AllRooms();
@@ -159,7 +165,6 @@ namespace DSEDHotelBookingSystem
             {
                 FamilyRooms();
             }
-
         }
         #endregion
 
@@ -167,13 +172,23 @@ namespace DSEDHotelBookingSystem
         {
             NewRoomValues();
             myRooms.InsertRoom();
-            AllRooms();
+            ComboboxViewRoomsSelected();
+
+            Reset();
+        }
+
+        private void btnEditRoom_Click(object sender, EventArgs e)
+        {
+            NewRoomValues();
+            myRooms.UpdateRoom();
+            ComboboxViewRoomsSelected();
 
             Reset();
         }
 
         private void NewRoomValues()
         {
+            myRooms.RoomID = Convert.ToInt32(lblRoomID.Text);
             myRooms.RoomName = txtRoomName.Text;
             myRooms.SingleBeds = Convert.ToInt32(nudSingleBed.Text);
             myRooms.QueenBeds = Convert.ToInt32(nudQueenBed.Text);
@@ -208,6 +223,7 @@ namespace DSEDHotelBookingSystem
         #region Cell Content Clicked
         private void dgvRooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            lblRoomID.Text = dgvRooms.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtRoomName.Text = dgvRooms.Rows[e.RowIndex].Cells[1].Value.ToString();
             nudSingleBed.Text = dgvRooms.Rows[e.RowIndex].Cells[2].Value.ToString();
             nudQueenBed.Text = dgvRooms.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -218,9 +234,11 @@ namespace DSEDHotelBookingSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hotelDataSet3.RoomType' table. You can move, or remove it, as needed.
+            // Makes sure that when form is loaded that the combobox with the room type displays the following: Single, Double or Family
             this.roomTypeTableAdapter2.Fill(this.hotelDataSet3.RoomType);
 
         }
+
+
     }
 }
