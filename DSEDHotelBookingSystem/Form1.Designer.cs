@@ -140,10 +140,14 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.cbxViewRooms = new System.Windows.Forms.ComboBox();
-            this.hotelDataSet = new DSEDHotelBookingSystem.HotelDataSet();
             this.roomTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet = new DSEDHotelBookingSystem.HotelDataSet();
             this.roomTypeTableAdapter = new DSEDHotelBookingSystem.HotelDataSetTableAdapters.RoomTypeTableAdapter();
             this.roomTypeTableAdapter1 = new DSEDHotelBookingSystem.HotelDataSet1TableAdapters.RoomTypeTableAdapter();
+            this.roomTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet3 = new DSEDHotelBookingSystem.HotelDataSet3();
+            this.roomTypeBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTypeTableAdapter2 = new DSEDHotelBookingSystem.HotelDataSet3TableAdapters.RoomTypeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -189,8 +193,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -1148,7 +1155,8 @@
             // 
             // cbxRoomType
             // 
-            this.cbxRoomType.DataSource = this.roomTypeBindingSource;
+            this.cbxRoomType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roomTypeBindingSource3, "RoomTypeID", true));
+            this.cbxRoomType.DataSource = this.roomTypeBindingSource3;
             this.cbxRoomType.DisplayMember = "Room Type";
             this.cbxRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxRoomType.FormattingEnabled = true;
@@ -1411,15 +1419,15 @@
             this.cbxViewRooms.TabIndex = 2;
             this.cbxViewRooms.SelectedIndexChanged += new System.EventHandler(this.cbxViewRooms_SelectedIndexChanged);
             // 
-            // hotelDataSet
-            // 
-            this.hotelDataSet.DataSetName = "HotelDataSet";
-            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // roomTypeBindingSource
             // 
             this.roomTypeBindingSource.DataMember = "RoomType";
             this.roomTypeBindingSource.DataSource = this.hotelDataSet;
+            // 
+            // hotelDataSet
+            // 
+            this.hotelDataSet.DataSetName = "HotelDataSet";
+            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roomTypeTableAdapter
             // 
@@ -1428,6 +1436,24 @@
             // roomTypeTableAdapter1
             // 
             this.roomTypeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // roomTypeBindingSource2
+            // 
+            this.roomTypeBindingSource2.DataMember = "RoomType";
+            // 
+            // hotelDataSet3
+            // 
+            this.hotelDataSet3.DataSetName = "HotelDataSet3";
+            this.hotelDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomTypeBindingSource3
+            // 
+            this.roomTypeBindingSource3.DataMember = "RoomType";
+            this.roomTypeBindingSource3.DataSource = this.hotelDataSet3;
+            // 
+            // roomTypeTableAdapter2
+            // 
+            this.roomTypeTableAdapter2.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -1441,6 +1467,7 @@
             this.Text = "Hotel Booking System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1493,8 +1520,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1613,6 +1643,10 @@
         private System.Windows.Forms.BindingSource roomTypeBindingSource1;
         private HotelDataSet1TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource roomTypeBindingSource2;
+        private HotelDataSet3 hotelDataSet3;
+        private System.Windows.Forms.BindingSource roomTypeBindingSource3;
+        private HotelDataSet3TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter2;
     }
 }
 

@@ -91,6 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HotelDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataSet31.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,6 +187,17 @@
     </None>
     <None Include="HotelDataSet2.xss">
       <DependentUpon>HotelDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet31.xsc">
+      <DependentUpon>HotelDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataSet31.xss">
+      <DependentUpon>HotelDataSet31.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>

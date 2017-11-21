@@ -215,5 +215,12 @@ namespace DSEDHotelBookingSystem
             cbxRoomType.Text = dgvRooms.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
         #endregion
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hotelDataSet3.RoomType' table. You can move, or remove it, as needed.
+            this.roomTypeTableAdapter2.Fill(this.hotelDataSet3.RoomType);
+
+        }
     }
 }
