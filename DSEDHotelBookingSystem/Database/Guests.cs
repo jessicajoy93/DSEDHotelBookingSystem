@@ -28,6 +28,7 @@ namespace DSEDHotelBookingSystem.Database
                 var alldata = from g in context.Guests
                               select new
                               {
+                                  g.GuestID,
                                   g.FirstName,
                                   g.LastName,
                                   g.Address,

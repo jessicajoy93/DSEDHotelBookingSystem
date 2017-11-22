@@ -75,8 +75,6 @@ namespace DSEDHotelBookingSystem
             tabGuest.Visible = true;
 
             AllGuests();
-
-
         }
 
         private void AllGuests()
@@ -99,7 +97,23 @@ namespace DSEDHotelBookingSystem
         {
             GuestValues();
             myGuests.InsertGuest();
-            Reset();
+            AllGuests();
+            ResetGuest();
+        }
+
+        private void ResetGuest()
+        {
+            lblGuestID.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtAddress.Text = "";
+            txtSuburb.Text = "";
+            txtCity.Text = "";
+            txtPostcode.Text = "";
+            txtCountry.Text = "";
+            txtPhone.Text = "";
+            txtMobile.Text = "";
+            txtEmail.Text = "";
         }
 
         private void GuestID()
@@ -134,7 +148,7 @@ namespace DSEDHotelBookingSystem
 
         private void btnResetGuest_Click(object sender, EventArgs e)
         {
-
+            ResetGuest();
         }
 
 
