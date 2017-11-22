@@ -53,5 +53,38 @@ namespace DSEDHotelBookingSystem.Database
                 context.SaveChanges();
             }
         }
+
+        public void DeleteRoomType()
+        {
+
+            // Our stanard using statement passing all the data to context
+
+            string roomtype = Room_Type;
+
+            if (MessageBox.Show("Do you REALLY want to delete " + roomtype + "?", "Delete Record",
+                    MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                return;
+            }
+            try
+            {
+                using (var context = new HotelEntities())
+                {
+                    // Select the row you want to delete
+                    int id = RoomTypeID;
+                    var roomType = (from rt in context.RoomTypes where rt.RoomTypeID == id select rt).SingleOrDefault();
+
+                    // run remove command
+                    context.RoomTypes.Remove(roomType);
+
+                    // Save the changes
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Room has already been deleted or another error has occured\n\n" + e);
+            }
+        }
     }
 }

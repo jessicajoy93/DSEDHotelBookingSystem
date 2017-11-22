@@ -307,7 +307,18 @@ namespace DSEDHotelBookingSystem
 
         private void btnDeleteRoomType_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                NewRoomTypeValues();
+                RoomTypeID();
+                myRoomTypes.DeleteRoomType();
+                RoomType();
+                Reset();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a room type before deleting\n\n" + ex);
+            }
         }
         #endregion
 
