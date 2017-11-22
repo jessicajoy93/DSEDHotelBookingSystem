@@ -267,7 +267,6 @@ namespace DSEDHotelBookingSystem
         {
             NewRoomTypeValues();
             RoomTypeDataValidation();
-
         }
 
         private void btnResetRoomType_Click(object sender, EventArgs e)
@@ -281,6 +280,10 @@ namespace DSEDHotelBookingSystem
             {
                 MessageBox.Show("Please enter some text first.");
             }
+            else if (VScroll)
+            {
+
+            }
             else
             {
                 myRoomTypes.InsertRoomType();
@@ -288,6 +291,23 @@ namespace DSEDHotelBookingSystem
 
                 Reset();
             }
+        }
+
+        private void btnEditRoomType_Click(object sender, EventArgs e)
+        {
+            NewRoomTypeValues();
+            RoomTypeID();
+            myRoomTypes.UpdateRoomType();
+
+            RoomType();
+
+
+            Reset();
+        }
+
+        private void btnDeleteRoomType_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
 

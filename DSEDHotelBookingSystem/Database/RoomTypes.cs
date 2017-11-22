@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DSEDHotelBookingSystem.Database
 {
@@ -39,5 +40,18 @@ namespace DSEDHotelBookingSystem.Database
             }
         }
 
+        public void UpdateRoomType()
+        {
+            using (var context = new HotelEntities())
+            {
+                var query = from rt in context.RoomTypes where rt.RoomTypeID == RoomTypeID select rt;
+
+                var roomType = query.FirstOrDefault(); //gets the first one
+                roomType.Room_Type = Room_Type;
+
+
+                context.SaveChanges();
+            }
+        }
     }
 }
