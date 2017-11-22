@@ -12,8 +12,9 @@
           <Property Name="BillingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="GuestIDFK" Type="int" />
           <Property Name="RoomIDFK" Type="int" />
-          <Property Name="Wifi Charge" Type="int" />
-          <Property Name="Total Charge" Type="int" />
+          <Property Name="WifiCharge" Type="int" />
+          <Property Name="LateCheckOut" Type="int" />
+          <Property Name="TotalCharge" Type="int" />
         </EntityType>
         <EntityType Name="Bookings">
           <Key>
@@ -22,31 +23,34 @@
           <Property Name="BookingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoomIDFK" Type="int" />
           <Property Name="GuestIDFK" Type="int" />
-          <Property Name="Number of Guests" Type="nchar" MaxLength="10" />
-          <Property Name="Booking Check In" Type="date" />
-          <Property Name="Booking Check Out" Type="date" />
+          <Property Name="NumOfGuests" Type="nchar" MaxLength="10" />
+          <Property Name="CheckIn" Type="date" />
+          <Property Name="CheckOut" Type="date" />
         </EntityType>
         <EntityType Name="Guests">
           <Key>
             <PropertyRef Name="GuestID" />
           </Key>
           <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="First Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Last Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" />
           <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
           <Property Name="City" Type="nvarchar" MaxLength="50" />
           <Property Name="Postcode" Type="nvarchar" MaxLength="50" />
           <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Rooms">
           <Key>
             <PropertyRef Name="RoomID" />
           </Key>
           <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Room Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Single Beds" Type="int" />
-          <Property Name="Queen Beds" Type="int" />
+          <Property Name="RoomName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SingleBeds" Type="int" />
+          <Property Name="QueenBeds" Type="int" />
           <Property Name="Sleeps" Type="int" />
           <Property Name="Cost" Type="int" />
           <Property Name="RoomTypeIDFK" Type="int" />
@@ -56,7 +60,7 @@
             <PropertyRef Name="RoomTypeID" />
           </Key>
           <Property Name="RoomTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Room Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="RoomType" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Billings_Guests">
           <End Role="Guests" Type="Self.Guests" Multiplicity="0..1" />
@@ -153,19 +157,19 @@
           <EntitySet Name="Billings" EntityType="HotelModel.Billing" />
           <EntitySet Name="Bookings" EntityType="HotelModel.Booking" />
           <EntitySet Name="Guests" EntityType="HotelModel.Guest" />
+          <EntitySet Name="Rooms" EntityType="HotelModel.Room" />
           <EntitySet Name="RoomTypes" EntityType="HotelModel.RoomType" />
           <AssociationSet Name="FK_Billings_Guests" Association="HotelModel.FK_Billings_Guests">
             <End Role="Guest" EntitySet="Guests" />
             <End Role="Billing" EntitySet="Billings" />
           </AssociationSet>
-          <AssociationSet Name="FK_Bookings_Guests" Association="HotelModel.FK_Bookings_Guests">
-            <End Role="Guest" EntitySet="Guests" />
-            <End Role="Booking" EntitySet="Bookings" />
-          </AssociationSet>
-          <EntitySet Name="Rooms" EntityType="HotelModel.Room" />
           <AssociationSet Name="FK_Billings_Rooms1" Association="HotelModel.FK_Billings_Rooms1">
             <End Role="Room" EntitySet="Rooms" />
             <End Role="Billing" EntitySet="Billings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Bookings_Guests" Association="HotelModel.FK_Bookings_Guests">
+            <End Role="Guest" EntitySet="Guests" />
+            <End Role="Booking" EntitySet="Bookings" />
           </AssociationSet>
           <AssociationSet Name="FK_Bookings_Rooms1" Association="HotelModel.FK_Bookings_Rooms1">
             <End Role="Room" EntitySet="Rooms" />
@@ -183,8 +187,9 @@
           <Property Name="BillingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="GuestIDFK" Type="Int32" />
           <Property Name="RoomIDFK" Type="Int32" />
-          <Property Name="Wifi_Charge" Type="Int32" />
-          <Property Name="Total_Charge" Type="Int32" />
+          <Property Name="WifiCharge" Type="Int32" />
+          <Property Name="LateCheckOut" Type="Int32" />
+          <Property Name="TotalCharge" Type="Int32" />
           <NavigationProperty Name="Guest" Relationship="HotelModel.FK_Billings_Guests" FromRole="Billing" ToRole="Guest" />
           <NavigationProperty Name="Room" Relationship="HotelModel.FK_Billings_Rooms1" FromRole="Billing" ToRole="Room" />
         </EntityType>
@@ -195,9 +200,9 @@
           <Property Name="BookingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoomIDFK" Type="Int32" />
           <Property Name="GuestIDFK" Type="Int32" />
-          <Property Name="Number_of_Guests" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Booking_Check_In" Type="DateTime" Precision="0" />
-          <Property Name="Booking_Check_Out" Type="DateTime" Precision="0" />
+          <Property Name="NumOfGuests" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CheckIn" Type="DateTime" Precision="0" />
+          <Property Name="CheckOut" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Guest" Relationship="HotelModel.FK_Bookings_Guests" FromRole="Booking" ToRole="Guest" />
           <NavigationProperty Name="Room" Relationship="HotelModel.FK_Bookings_Rooms1" FromRole="Booking" ToRole="Room" />
         </EntityType>
@@ -206,15 +211,33 @@
             <PropertyRef Name="GuestID" />
           </Key>
           <Property Name="GuestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Billings" Relationship="HotelModel.FK_Billings_Guests" FromRole="Guest" ToRole="Billing" />
           <NavigationProperty Name="Bookings" Relationship="HotelModel.FK_Bookings_Guests" FromRole="Guest" ToRole="Booking" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SingleBeds" Type="Int32" />
+          <Property Name="QueenBeds" Type="Int32" />
+          <Property Name="Sleeps" Type="Int32" />
+          <Property Name="Cost" Type="Int32" />
+          <Property Name="RoomTypeIDFK" Type="Int32" />
+          <NavigationProperty Name="Billings" Relationship="HotelModel.FK_Billings_Rooms1" FromRole="Room" ToRole="Billing" />
+          <NavigationProperty Name="Bookings" Relationship="HotelModel.FK_Bookings_Rooms1" FromRole="Room" ToRole="Booking" />
+          <NavigationProperty Name="RoomType" Relationship="HotelModel.FK_Rooms_RoomType" FromRole="Room" ToRole="RoomType" />
         </EntityType>
         <EntityType Name="RoomType">
           <Key>
@@ -236,33 +259,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Bookings_Guests">
-          <End Type="HotelModel.Guest" Role="Guest" Multiplicity="0..1" />
-          <End Type="HotelModel.Booking" Role="Booking" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Guest">
-              <PropertyRef Name="GuestID" />
-            </Principal>
-            <Dependent Role="Booking">
-              <PropertyRef Name="GuestIDFK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="Room">
-          <Key>
-            <PropertyRef Name="RoomID" />
-          </Key>
-          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Room_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Single_Beds" Type="Int32" />
-          <Property Name="Queen_Beds" Type="Int32" />
-          <Property Name="Sleeps" Type="Int32" />
-          <Property Name="Cost" Type="Int32" />
-          <Property Name="RoomTypeIDFK" Type="Int32" />
-          <NavigationProperty Name="Billings" Relationship="HotelModel.FK_Billings_Rooms1" FromRole="Room" ToRole="Billing" />
-          <NavigationProperty Name="Bookings" Relationship="HotelModel.FK_Bookings_Rooms1" FromRole="Room" ToRole="Booking" />
-          <NavigationProperty Name="RoomType" Relationship="HotelModel.FK_Rooms_RoomType" FromRole="Room" ToRole="RoomType" />
-        </EntityType>
         <Association Name="FK_Billings_Rooms1">
           <End Type="HotelModel.Room" Role="Room" Multiplicity="0..1" />
           <End Type="HotelModel.Billing" Role="Billing" Multiplicity="*" />
@@ -272,6 +268,18 @@
             </Principal>
             <Dependent Role="Billing">
               <PropertyRef Name="RoomIDFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Bookings_Guests">
+          <End Type="HotelModel.Guest" Role="Guest" Multiplicity="0..1" />
+          <End Type="HotelModel.Booking" Role="Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Guest">
+              <PropertyRef Name="GuestID" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="GuestIDFK" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -308,8 +316,9 @@
           <EntitySetMapping Name="Billings">
             <EntityTypeMapping TypeName="HotelModel.Billing">
               <MappingFragment StoreEntitySet="Billings">
-                <ScalarProperty Name="Total_Charge" ColumnName="Total Charge" />
-                <ScalarProperty Name="Wifi_Charge" ColumnName="Wifi Charge" />
+                <ScalarProperty Name="TotalCharge" ColumnName="TotalCharge" />
+                <ScalarProperty Name="LateCheckOut" ColumnName="LateCheckOut" />
+                <ScalarProperty Name="WifiCharge" ColumnName="WifiCharge" />
                 <ScalarProperty Name="RoomIDFK" ColumnName="RoomIDFK" />
                 <ScalarProperty Name="GuestIDFK" ColumnName="GuestIDFK" />
                 <ScalarProperty Name="BillingID" ColumnName="BillingID" />
@@ -319,9 +328,9 @@
           <EntitySetMapping Name="Bookings">
             <EntityTypeMapping TypeName="HotelModel.Booking">
               <MappingFragment StoreEntitySet="Bookings">
-                <ScalarProperty Name="Booking_Check_Out" ColumnName="Booking Check Out" />
-                <ScalarProperty Name="Booking_Check_In" ColumnName="Booking Check In" />
-                <ScalarProperty Name="Number_of_Guests" ColumnName="Number of Guests" />
+                <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+                <ScalarProperty Name="NumOfGuests" ColumnName="NumOfGuests" />
                 <ScalarProperty Name="GuestIDFK" ColumnName="GuestIDFK" />
                 <ScalarProperty Name="RoomIDFK" ColumnName="RoomIDFK" />
                 <ScalarProperty Name="BookingID" ColumnName="BookingID" />
@@ -331,22 +340,17 @@
           <EntitySetMapping Name="Guests">
             <EntityTypeMapping TypeName="HotelModel.Guest">
               <MappingFragment StoreEntitySet="Guests">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
                 <ScalarProperty Name="Postcode" ColumnName="Postcode" />
                 <ScalarProperty Name="City" ColumnName="City" />
                 <ScalarProperty Name="Suburb" ColumnName="Suburb" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
-                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="GuestID" ColumnName="GuestID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RoomTypes">
-            <EntityTypeMapping TypeName="HotelModel.RoomType">
-              <MappingFragment StoreEntitySet="RoomType">
-                <ScalarProperty Name="Room_Type" ColumnName="Room Type" />
-                <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -356,10 +360,18 @@
                 <ScalarProperty Name="RoomTypeIDFK" ColumnName="RoomTypeIDFK" />
                 <ScalarProperty Name="Cost" ColumnName="Cost" />
                 <ScalarProperty Name="Sleeps" ColumnName="Sleeps" />
-                <ScalarProperty Name="Queen_Beds" ColumnName="Queen Beds" />
-                <ScalarProperty Name="Single_Beds" ColumnName="Single Beds" />
-                <ScalarProperty Name="Room_Name" ColumnName="Room Name" />
+                <ScalarProperty Name="QueenBeds" ColumnName="QueenBeds" />
+                <ScalarProperty Name="SingleBeds" ColumnName="SingleBeds" />
+                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
                 <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoomTypes">
+            <EntityTypeMapping TypeName="HotelModel.RoomType">
+              <MappingFragment StoreEntitySet="RoomType">
+                <ScalarProperty Name="Room_Type" ColumnName="RoomType" />
+                <ScalarProperty Name="RoomTypeID" ColumnName="RoomTypeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

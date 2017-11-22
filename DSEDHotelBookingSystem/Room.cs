@@ -22,9 +22,9 @@ namespace DSEDHotelBookingSystem
         }
     
         public int RoomID { get; set; }
-        public string Room_Name { get; set; }
-        public Nullable<int> Single_Beds { get; set; }
-        public Nullable<int> Queen_Beds { get; set; }
+        public string RoomName { get; set; }
+        public Nullable<int> SingleBeds { get; set; }
+        public Nullable<int> QueenBeds { get; set; }
         public Nullable<int> Sleeps { get; set; }
         public Nullable<int> Cost { get; set; }
         public Nullable<int> RoomTypeIDFK { get; set; }

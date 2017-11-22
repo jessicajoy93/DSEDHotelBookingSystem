@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="Database\ModelCalls.cs" />
     <Compile Include="Database\Rooms.cs" />
+    <Compile Include="Database\RoomTypes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HotelDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -198,6 +204,17 @@
     </None>
     <None Include="HotelDataSet31.xss">
       <DependentUpon>HotelDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet4.xsc">
+      <DependentUpon>HotelDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataSet4.xss">
+      <DependentUpon>HotelDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>

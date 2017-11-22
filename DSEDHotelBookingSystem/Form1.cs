@@ -16,6 +16,7 @@ namespace DSEDHotelBookingSystem
     {
         ModelCalls myDatabase = new ModelCalls();
         Rooms myRooms = new Rooms();
+        RoomTypes myRoomTypes = new RoomTypes();
 
         public Form1()
         {
@@ -104,7 +105,7 @@ namespace DSEDHotelBookingSystem
 
         public void AllRooms()
         {
-            dgvRooms.DataSource = myRooms.AllRooms();//alldata.ToList();
+            dgvRooms.DataSource = myRooms.AllRooms();
 
             RoomsDgvColumnHeaders();
         }
@@ -229,6 +230,67 @@ namespace DSEDHotelBookingSystem
         }
         #endregion
 
+        #region Room Types
+        private void btnRoomTypes_Click(object sender, EventArgs e)
+        {
+            HideTabHeaders();
+            tabRoomTypes.Visible = true;
+            RoomType();
+        }
+
+        public void RoomType()
+        {
+            dgvRoomType.DataSource = myRoomTypes.RoomType();
+
+            RoomTypesDgvColumnHeaders();
+        }
+
+        private void RoomTypesDgvColumnHeaders()
+        {
+            dgvRoomType.Columns[0].HeaderText = "Room Type ID";
+            dgvRoomType.Columns[1].HeaderText = "Room Type";
+
+            dgvRoomType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void RoomTypeID()
+        {
+            myRoomTypes.RoomTypeID = Convert.ToInt32(lblRoomTypeID.Text);
+        }
+
+        private void NewRoomTypeValues()
+        {
+            myRoomTypes.Room_Type = txtRoomType.Text;
+        }
+
+        private void btnNewRoomType_Click(object sender, EventArgs e)
+        {
+            NewRoomTypeValues();
+            RoomTypeDataValidation();
+
+        }
+
+        private void btnResetRoomType_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void RoomTypeDataValidation()
+        {
+            if (txtRoomType.Text == "")
+            {
+                MessageBox.Show("Please enter some text first.");
+            }
+            else
+            {
+                myRoomTypes.InsertRoomType();
+                RoomType();
+
+                Reset();
+            }
+        }
+        #endregion
+
         #region Hide Tab Headers
         private void HideTabHeaders()
         {
@@ -238,21 +300,28 @@ namespace DSEDHotelBookingSystem
             tabBookings.Visible = false;
             tabGuest.Visible = false;
             tabNewGuest.Visible = false;
+            tabRoomTypes.Visible = false;
         }
         #endregion
 
         #region Reset
         private void Reset()
         {
+            // Room
             lblRoomID.Text = "";
             txtRoomName.Text = "";
             txtRoomCost.Text = "";
             nudQueenBed.Text = "0";
             nudSingleBed.Text = "0";
+
+            // Room Type
+            lblRoomTypeID.Text = "";
+            txtRoomType.Text = "";
         }
         #endregion
 
         #region Cell Content Clicked
+        // Data Grid View - Rooms - Content Click
         private void dgvRooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             lblRoomID.Text = dgvRooms.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -262,12 +331,24 @@ namespace DSEDHotelBookingSystem
             txtRoomCost.Text = dgvRooms.Rows[e.RowIndex].Cells[5].Value.ToString();
             cbxRoomType.Text = dgvRooms.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
+
+        // Data Grid View - Room Types - Content Click
+        private void dgvRoomType_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblRoomTypeID.Text = dgvRoomType.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtRoomType.Text = dgvRoomType.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+
+
         #endregion
 
+
+        // Makes Combobox data work
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Makes sure that when form is loaded that the combobox with the room type displays the following: Single, Double or Family
-            this.roomTypeTableAdapter2.Fill(this.hotelDataSet3.RoomType);
+            // TODO: This line of code loads data into the 'hotelDataSet4.RoomType' table. You can move, or remove it, as needed.
+            this.roomTypeTableAdapter.Fill(this.hotelDataSet4.RoomType);
 
         }
 

@@ -28,7 +28,7 @@ namespace DSEDHotelBookingSystem
         public virtual DbSet<Billing> Billings { get; set; }
         public virtual DbSet<Booking> Bookings { get; set; }
         public virtual DbSet<Guest> Guests { get; set; }
-        public virtual DbSet<RoomType> RoomTypes { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<RoomType> RoomTypes { get; set; }
     }
 }

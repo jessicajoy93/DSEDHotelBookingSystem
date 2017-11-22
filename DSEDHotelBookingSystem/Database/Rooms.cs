@@ -26,9 +26,9 @@ namespace DSEDHotelBookingSystem.Database
                               select new
                               {
                                   r.RoomID,
-                                  r.Room_Name,
-                                  r.Single_Beds,
-                                  r.Queen_Beds,
+                                  r.RoomName,
+                                  r.SingleBeds,
+                                  r.QueenBeds,
                                   r.Sleeps,
                                   r.Cost,
                                   r.RoomType.Room_Type
@@ -50,9 +50,9 @@ namespace DSEDHotelBookingSystem.Database
                               select new
                               {
                                   r.RoomID,
-                                  r.Room_Name,
-                                  r.Single_Beds,
-                                  r.Queen_Beds,
+                                  r.RoomName,
+                                  r.SingleBeds,
+                                  r.QueenBeds,
                                   r.Sleeps,
                                   r.Cost,
                                   r.RoomType.Room_Type
@@ -74,9 +74,9 @@ namespace DSEDHotelBookingSystem.Database
                               select new
                               {
                                   r.RoomID,
-                                  r.Room_Name,
-                                  r.Single_Beds,
-                                  r.Queen_Beds,
+                                  r.RoomName,
+                                  r.SingleBeds,
+                                  r.QueenBeds,
                                   r.Sleeps,
                                   r.Cost,
                                   r.RoomType.Room_Type
@@ -98,9 +98,9 @@ namespace DSEDHotelBookingSystem.Database
                               select new
                               {
                                   r.RoomID,
-                                  r.Room_Name,
-                                  r.Single_Beds,
-                                  r.Queen_Beds,
+                                  r.RoomName,
+                                  r.SingleBeds,
+                                  r.QueenBeds,
                                   r.Sleeps,
                                   r.Cost,
                                   r.RoomType.Room_Type
@@ -115,9 +115,9 @@ namespace DSEDHotelBookingSystem.Database
             using (var context = new HotelEntities())
             {
                 var r = new Room();
-                r.Room_Name = RoomName;
-                r.Single_Beds = SingleBeds;
-                r.Queen_Beds = QueenBeds;
+                r.RoomName = RoomName;
+                r.SingleBeds = SingleBeds;
+                r.QueenBeds = QueenBeds;
                 r.Sleeps = Sleeps;
                 r.Cost = Cost;
                 r.RoomTypeIDFK = RoomType;
@@ -134,9 +134,9 @@ namespace DSEDHotelBookingSystem.Database
                 var query = from r in context.Rooms where r.RoomID == RoomID select r;
 
                 var room = query.FirstOrDefault(); //gets the first one
-                room.Room_Name = RoomName;
-                room.Single_Beds = SingleBeds;
-                room.Queen_Beds = QueenBeds;
+                room.RoomName = RoomName;
+                room.SingleBeds = SingleBeds;
+                room.QueenBeds = QueenBeds;
                 room.Sleeps = Sleeps;
                 room.Cost = Cost;
                 room.RoomTypeIDFK = RoomType;

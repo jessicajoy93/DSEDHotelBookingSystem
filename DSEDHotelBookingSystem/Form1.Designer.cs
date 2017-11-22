@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,6 +47,7 @@
             this.btnBookings = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRooms = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRoomTypes = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.panelHome = new System.Windows.Forms.Panel();
@@ -118,8 +121,6 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cbxRoomType = new System.Windows.Forms.ComboBox();
-            this.roomTypeBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.hotelDataSet3 = new DSEDHotelBookingSystem.HotelDataSet3();
             this.label37 = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetRoom = new System.Windows.Forms.Button();
@@ -141,14 +142,24 @@
             this.lblRoomID = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cbxViewRooms = new System.Windows.Forms.ComboBox();
-            this.roomTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hotelDataSet1 = new DSEDHotelBookingSystem.HotelDataSet1();
+            this.tabRoomTypes = new System.Windows.Forms.TabPage();
+            this.panelRoomTypes = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.lblRoomTypeID = new System.Windows.Forms.Label();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnResetRoomType = new System.Windows.Forms.Button();
+            this.btnNewRoomType = new System.Windows.Forms.Button();
+            this.btnDeleteRoomType = new System.Windows.Forms.Button();
+            this.btnEditRoomType = new System.Windows.Forms.Button();
+            this.txtRoomType = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.dgvRoomType = new System.Windows.Forms.DataGridView();
+            this.label38 = new System.Windows.Forms.Label();
+            this.hotelDataSet4 = new DSEDHotelBookingSystem.HotelDataSet4();
             this.roomTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hotelDataSet = new DSEDHotelBookingSystem.HotelDataSet();
-            this.roomTypeTableAdapter = new DSEDHotelBookingSystem.HotelDataSetTableAdapters.RoomTypeTableAdapter();
-            this.roomTypeTableAdapter1 = new DSEDHotelBookingSystem.HotelDataSet1TableAdapters.RoomTypeTableAdapter();
-            this.roomTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.roomTypeTableAdapter2 = new DSEDHotelBookingSystem.HotelDataSet3TableAdapters.RoomTypeTableAdapter();
+            this.roomTypeTableAdapter = new DSEDHotelBookingSystem.HotelDataSet4TableAdapters.RoomTypeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -187,18 +198,20 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet3)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSingleBed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).BeginInit();
+            this.tabRoomTypes.SuspendLayout();
+            this.panelRoomTypes.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRoomType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -318,7 +331,8 @@
             // roomsToolStripMenuItem
             // 
             this.roomsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnRooms});
+            this.btnRooms,
+            this.btnRoomTypes});
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
             this.roomsToolStripMenuItem.Size = new System.Drawing.Size(82, 33);
             this.roomsToolStripMenuItem.Text = "Rooms";
@@ -330,6 +344,13 @@
             this.btnRooms.Text = "View Rooms";
             this.btnRooms.Click += new System.EventHandler(this.btnRooms_Click);
             // 
+            // btnRoomTypes
+            // 
+            this.btnRoomTypes.Name = "btnRoomTypes";
+            this.btnRoomTypes.Size = new System.Drawing.Size(188, 30);
+            this.btnRoomTypes.Text = "Room Types";
+            this.btnRoomTypes.Click += new System.EventHandler(this.btnRoomTypes_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabHome);
@@ -338,6 +359,7 @@
             this.tabControl1.Controls.Add(this.tabBillings);
             this.tabControl1.Controls.Add(this.tabBookings);
             this.tabControl1.Controls.Add(this.tabRooms);
+            this.tabControl1.Controls.Add(this.tabRoomTypes);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -1156,9 +1178,9 @@
             // 
             // cbxRoomType
             // 
-            this.cbxRoomType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roomTypeBindingSource3, "RoomTypeID", true));
-            this.cbxRoomType.DataSource = this.roomTypeBindingSource3;
-            this.cbxRoomType.DisplayMember = "Room Type";
+            this.cbxRoomType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roomTypeBindingSource, "RoomTypeID", true));
+            this.cbxRoomType.DataSource = this.roomTypeBindingSource;
+            this.cbxRoomType.DisplayMember = "RoomType";
             this.cbxRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxRoomType.FormattingEnabled = true;
             this.cbxRoomType.Location = new System.Drawing.Point(142, 165);
@@ -1166,16 +1188,6 @@
             this.cbxRoomType.Size = new System.Drawing.Size(281, 32);
             this.cbxRoomType.TabIndex = 3;
             this.cbxRoomType.ValueMember = "RoomTypeID";
-            // 
-            // roomTypeBindingSource3
-            // 
-            this.roomTypeBindingSource3.DataMember = "RoomType";
-            this.roomTypeBindingSource3.DataSource = this.hotelDataSet3;
-            // 
-            // hotelDataSet3
-            // 
-            this.hotelDataSet3.DataSetName = "HotelDataSet3";
-            this.hotelDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label37
             // 
@@ -1363,26 +1375,27 @@
             // dgvRooms
             // 
             this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRooms.Location = new System.Drawing.Point(3, 3);
             this.dgvRooms.Name = "dgvRooms";
+            this.dgvRooms.RowTemplate.Height = 30;
             this.dgvRooms.Size = new System.Drawing.Size(661, 374);
             this.dgvRooms.TabIndex = 1;
             this.dgvRooms.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellContentClick);
@@ -1432,41 +1445,241 @@
             this.cbxViewRooms.TabIndex = 2;
             this.cbxViewRooms.SelectedIndexChanged += new System.EventHandler(this.cbxViewRooms_SelectedIndexChanged);
             // 
-            // roomTypeBindingSource1
+            // tabRoomTypes
             // 
-            this.roomTypeBindingSource1.DataMember = "RoomType";
-            this.roomTypeBindingSource1.DataSource = this.hotelDataSet1;
+            this.tabRoomTypes.Controls.Add(this.panelRoomTypes);
+            this.tabRoomTypes.Location = new System.Drawing.Point(4, 22);
+            this.tabRoomTypes.Name = "tabRoomTypes";
+            this.tabRoomTypes.Size = new System.Drawing.Size(1125, 542);
+            this.tabRoomTypes.TabIndex = 6;
+            this.tabRoomTypes.Text = "Room Types";
+            this.tabRoomTypes.UseVisualStyleBackColor = true;
             // 
-            // hotelDataSet1
+            // panelRoomTypes
             // 
-            this.hotelDataSet1.DataSetName = "HotelDataSet1";
-            this.hotelDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.panelRoomTypes.BackColor = System.Drawing.Color.Transparent;
+            this.panelRoomTypes.Controls.Add(this.tableLayoutPanel12);
+            this.panelRoomTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRoomTypes.Location = new System.Drawing.Point(0, 0);
+            this.panelRoomTypes.Name = "panelRoomTypes";
+            this.panelRoomTypes.Size = new System.Drawing.Size(1125, 542);
+            this.panelRoomTypes.TabIndex = 2;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel14, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.label38, 0, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(1125, 542);
+            this.tableLayoutPanel12.TabIndex = 4;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 2;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel14.Controls.Add(this.panel12, 1, 0);
+            this.tableLayoutPanel14.Controls.Add(this.dgvRoomType, 0, 0);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 111);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 1;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1119, 428);
+            this.tableLayoutPanel14.TabIndex = 3;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.lblRoomTypeID);
+            this.panel12.Controls.Add(this.tableLayoutPanel15);
+            this.panel12.Controls.Add(this.txtRoomType);
+            this.panel12.Controls.Add(this.label43);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(674, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(442, 422);
+            this.panel12.TabIndex = 13;
+            // 
+            // lblRoomTypeID
+            // 
+            this.lblRoomTypeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblRoomTypeID.Location = new System.Drawing.Point(66, 81);
+            this.lblRoomTypeID.Name = "lblRoomTypeID";
+            this.lblRoomTypeID.Size = new System.Drawing.Size(71, 26);
+            this.lblRoomTypeID.TabIndex = 13;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 4;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.Controls.Add(this.btnResetRoomType, 3, 0);
+            this.tableLayoutPanel15.Controls.Add(this.btnNewRoomType, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.btnDeleteRoomType, 2, 0);
+            this.tableLayoutPanel15.Controls.Add(this.btnEditRoomType, 1, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 286);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(442, 136);
+            this.tableLayoutPanel15.TabIndex = 11;
+            // 
+            // btnResetRoomType
+            // 
+            this.btnResetRoomType.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.reset;
+            this.btnResetRoomType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnResetRoomType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnResetRoomType.Location = new System.Drawing.Point(333, 3);
+            this.btnResetRoomType.Name = "btnResetRoomType";
+            this.btnResetRoomType.Size = new System.Drawing.Size(106, 130);
+            this.btnResetRoomType.TabIndex = 11;
+            this.btnResetRoomType.UseVisualStyleBackColor = true;
+            this.btnResetRoomType.Click += new System.EventHandler(this.btnResetRoomType_Click);
+            // 
+            // btnNewRoomType
+            // 
+            this.btnNewRoomType.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.add;
+            this.btnNewRoomType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNewRoomType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewRoomType.Location = new System.Drawing.Point(3, 3);
+            this.btnNewRoomType.Name = "btnNewRoomType";
+            this.btnNewRoomType.Size = new System.Drawing.Size(104, 130);
+            this.btnNewRoomType.TabIndex = 4;
+            this.btnNewRoomType.UseVisualStyleBackColor = true;
+            this.btnNewRoomType.Click += new System.EventHandler(this.btnNewRoomType_Click);
+            // 
+            // btnDeleteRoomType
+            // 
+            this.btnDeleteRoomType.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.delete;
+            this.btnDeleteRoomType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteRoomType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteRoomType.Location = new System.Drawing.Point(223, 3);
+            this.btnDeleteRoomType.Name = "btnDeleteRoomType";
+            this.btnDeleteRoomType.Size = new System.Drawing.Size(104, 130);
+            this.btnDeleteRoomType.TabIndex = 10;
+            this.btnDeleteRoomType.UseVisualStyleBackColor = true;
+            // 
+            // btnEditRoomType
+            // 
+            this.btnEditRoomType.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.update;
+            this.btnEditRoomType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditRoomType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEditRoomType.Location = new System.Drawing.Point(113, 3);
+            this.btnEditRoomType.Name = "btnEditRoomType";
+            this.btnEditRoomType.Size = new System.Drawing.Size(104, 130);
+            this.btnEditRoomType.TabIndex = 9;
+            this.btnEditRoomType.UseVisualStyleBackColor = true;
+            // 
+            // txtRoomType
+            // 
+            this.txtRoomType.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomType.Location = new System.Drawing.Point(143, 21);
+            this.txtRoomType.Name = "txtRoomType";
+            this.txtRoomType.Size = new System.Drawing.Size(280, 29);
+            this.txtRoomType.TabIndex = 0;
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(3, 21);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(134, 29);
+            this.label43.TabIndex = 1;
+            this.label43.Text = "Room Type:";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dgvRoomType
+            // 
+            this.dgvRoomType.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvRoomType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRoomType.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvRoomType.Location = new System.Drawing.Point(3, 3);
+            this.dgvRoomType.Name = "dgvRoomType";
+            this.dgvRoomType.RowTemplate.Height = 30;
+            this.dgvRoomType.Size = new System.Drawing.Size(665, 422);
+            this.dgvRoomType.TabIndex = 1;
+            this.dgvRoomType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoomType_CellContentClick);
+            this.dgvRoomType.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoomType_CellContentClick);
+            // 
+            // label38
+            // 
+            this.label38.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label38.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(3, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(1119, 104);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Beachfront Apartments - Room Types";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hotelDataSet4
+            // 
+            this.hotelDataSet4.DataSetName = "HotelDataSet4";
+            this.hotelDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roomTypeBindingSource
             // 
             this.roomTypeBindingSource.DataMember = "RoomType";
-            this.roomTypeBindingSource.DataSource = this.hotelDataSet;
-            // 
-            // hotelDataSet
-            // 
-            this.hotelDataSet.DataSetName = "HotelDataSet";
-            this.hotelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.roomTypeBindingSource.DataSource = this.hotelDataSet4;
             // 
             // roomTypeTableAdapter
             // 
             this.roomTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // roomTypeTableAdapter1
-            // 
-            this.roomTypeTableAdapter1.ClearBeforeFill = true;
-            // 
-            // roomTypeBindingSource2
-            // 
-            this.roomTypeBindingSource2.DataMember = "RoomType";
-            // 
-            // roomTypeTableAdapter2
-            // 
-            this.roomTypeTableAdapter2.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -1526,18 +1739,21 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet3)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudSingleBed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet1)).EndInit();
+            this.tabRoomTypes.ResumeLayout(false);
+            this.panelRoomTypes.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRoomType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1627,9 +1843,6 @@
         private System.Windows.Forms.TextBox txtSuburb;
         private System.Windows.Forms.ComboBox cbxViewRooms;
         private System.Windows.Forms.DataGridView dgvRooms;
-        private HotelDataSet hotelDataSet;
-        private System.Windows.Forms.BindingSource roomTypeBindingSource;
-        private HotelDataSetTableAdapters.RoomTypeTableAdapter roomTypeTableAdapter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
@@ -1652,15 +1865,27 @@
         private System.Windows.Forms.Button btnEditRoom;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox cbxRoomType;
-        private HotelDataSet1 hotelDataSet1;
-        private System.Windows.Forms.BindingSource roomTypeBindingSource1;
-        private HotelDataSet1TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter1;
         private System.Windows.Forms.Button btnResetRoom;
-        private System.Windows.Forms.BindingSource roomTypeBindingSource2;
-        private HotelDataSet3 hotelDataSet3;
-        private System.Windows.Forms.BindingSource roomTypeBindingSource3;
-        private HotelDataSet3TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter2;
         private System.Windows.Forms.Label lblRoomID;
+        private System.Windows.Forms.ToolStripMenuItem btnRoomTypes;
+        private System.Windows.Forms.TabPage tabRoomTypes;
+        private System.Windows.Forms.Panel panelRoomTypes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Button btnResetRoomType;
+        private System.Windows.Forms.Button btnNewRoomType;
+        private System.Windows.Forms.Button btnDeleteRoomType;
+        private System.Windows.Forms.Button btnEditRoomType;
+        private System.Windows.Forms.TextBox txtRoomType;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.DataGridView dgvRoomType;
+        private System.Windows.Forms.Label lblRoomTypeID;
+        private HotelDataSet4 hotelDataSet4;
+        private System.Windows.Forms.BindingSource roomTypeBindingSource;
+        private HotelDataSet4TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter;
     }
 }
 

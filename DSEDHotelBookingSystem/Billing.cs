@@ -17,8 +17,9 @@ namespace DSEDHotelBookingSystem
         public int BillingID { get; set; }
         public Nullable<int> GuestIDFK { get; set; }
         public Nullable<int> RoomIDFK { get; set; }
-        public Nullable<int> Wifi_Charge { get; set; }
-        public Nullable<int> Total_Charge { get; set; }
+        public Nullable<int> WifiCharge { get; set; }
+        public Nullable<int> LateCheckOut { get; set; }
+        public Nullable<int> TotalCharge { get; set; }
     
         public virtual Guest Guest { get; set; }
         public virtual Room Room { get; set; }

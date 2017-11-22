@@ -17,9 +17,9 @@ namespace DSEDHotelBookingSystem
         public int BookingID { get; set; }
         public Nullable<int> RoomIDFK { get; set; }
         public Nullable<int> GuestIDFK { get; set; }
-        public string Number_of_Guests { get; set; }
-        public Nullable<System.DateTime> Booking_Check_In { get; set; }
-        public Nullable<System.DateTime> Booking_Check_Out { get; set; }
+        public string NumOfGuests { get; set; }
+        public Nullable<System.DateTime> CheckIn { get; set; }
+        public Nullable<System.DateTime> CheckOut { get; set; }
     
         public virtual Guest Guest { get; set; }
         public virtual Room Room { get; set; }
