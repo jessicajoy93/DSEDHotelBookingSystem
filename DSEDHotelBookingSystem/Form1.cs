@@ -17,6 +17,7 @@ namespace DSEDHotelBookingSystem
         ModelCalls myDatabase = new ModelCalls();
         Rooms myRooms = new Rooms();
         RoomTypes myRoomTypes = new RoomTypes();
+        Guests myGuests = new Guests();
 
         public Form1()
         {
@@ -45,6 +46,7 @@ namespace DSEDHotelBookingSystem
 
 
         #region Exit Application
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             //ExitApplication();
@@ -57,44 +59,109 @@ namespace DSEDHotelBookingSystem
 
         private static void ExitApplication()
         {
-            if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
+
         #endregion
 
         #region Guests
-        private void btnGuests_Click(object sender, EventArgs e)
+        private void btnGuest_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
             tabGuest.Visible = true;
+
+            AllGuests();
+
+
         }
 
-        private void btnNewGuest_Click(object sender, EventArgs e)
+        private void AllGuests()
         {
-            HideTabHeaders();
-            tabNewGuest.Visible = true;
+            dgvGuests.DataSource = myGuests.AllGuests();
+
+            GuestsDgvColumnHeaders();
         }
+
+        private void GuestsDgvColumnHeaders()
+        {
+            dgvGuests.Columns[0].HeaderText = "Guest ID";
+            dgvGuests.Columns[1].HeaderText = "First Name";
+            dgvGuests.Columns[2].HeaderText = "Last Name";
+
+            dgvGuests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void btnAddGuest_Click(object sender, EventArgs e)
+        {
+            GuestValues();
+            myGuests.InsertGuest();
+            Reset();
+        }
+
+        private void GuestID()
+        {
+            myGuests.GuestID = Convert.ToInt32(lblGuestID.Text);
+        }
+
+        private void GuestValues()
+        {
+            myGuests.FirstName = txtFirstName.Text;
+            myGuests.LastName = txtLastName.Text;
+            myGuests.Address = txtAddress.Text;
+            myGuests.Suburb = txtSuburb.Text;
+            myGuests.City = txtCity.Text;
+            myGuests.Postcode = txtPostcode.Text;
+            myGuests.Country = txtCountry.Text;
+            myGuests.Phone = txtPhone.Text;
+            myGuests.Mobile = txtMobile.Text;
+            myGuests.Email = txtEmail.Text;
+        }
+
+
+        private void btnUpdateGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnResetGuest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         #endregion
 
         #region Billings
+
         private void btnBillings_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
             tabBillings.Visible = true;
         }
+
         #endregion
 
         #region Bookings
+
         private void btnBookings_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
             tabBookings.Visible = true;
         }
+
         #endregion
 
         #region Rooms
+
         private void btnRooms_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
@@ -123,25 +190,27 @@ namespace DSEDHotelBookingSystem
 
         public void SingleRooms()
         {
-            dgvRooms.DataSource = myRooms.SingleRooms();//alldata.ToList();
+            dgvRooms.DataSource = myRooms.SingleRooms(); //alldata.ToList();
 
             RoomsDgvColumnHeaders();
         }
+
         public void DoubleRooms()
         {
-            dgvRooms.DataSource = myRooms.DoubleRooms();//alldata.ToList();
+            dgvRooms.DataSource = myRooms.DoubleRooms(); //alldata.ToList();
 
             RoomsDgvColumnHeaders();
         }
 
         public void FamilyRooms()
         {
-            dgvRooms.DataSource = myRooms.FamilyRooms();//alldata.ToList();
+            dgvRooms.DataSource = myRooms.FamilyRooms(); //alldata.ToList();
 
             RoomsDgvColumnHeaders();
         }
 
         #region Combobox View Rooms Selected Index Changed
+
         private void cbxViewRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboboxViewRoomsSelected();
@@ -167,6 +236,7 @@ namespace DSEDHotelBookingSystem
                 FamilyRooms();
             }
         }
+
         #endregion
 
         private void btnNewRoom_Click(object sender, EventArgs e)
@@ -228,9 +298,11 @@ namespace DSEDHotelBookingSystem
             myRooms.Cost = Convert.ToInt32(txtRoomCost.Text);
             myRooms.RoomType = (int)cbxRoomType.SelectedValue;
         }
+
         #endregion
 
         #region Room Types
+
         private void btnRoomTypes_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
@@ -320,9 +392,11 @@ namespace DSEDHotelBookingSystem
                 MessageBox.Show("Please select a room type before deleting\n\n" + ex);
             }
         }
+
         #endregion
 
         #region Hide Tab Headers
+
         private void HideTabHeaders()
         {
             tabHome.Visible = false;
@@ -330,12 +404,13 @@ namespace DSEDHotelBookingSystem
             tabBillings.Visible = false;
             tabBookings.Visible = false;
             tabGuest.Visible = false;
-            tabNewGuest.Visible = false;
             tabRoomTypes.Visible = false;
         }
+
         #endregion
 
         #region Reset
+
         private void Reset()
         {
             // Room
@@ -349,9 +424,11 @@ namespace DSEDHotelBookingSystem
             lblRoomTypeID.Text = "";
             txtRoomType.Text = "";
         }
+
         #endregion
 
         #region Cell Content Clicked
+
         // Data Grid View - Rooms - Content Click
         private void dgvRooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

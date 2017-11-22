@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -40,9 +42,7 @@
             this.btnHome = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.guestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.a = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGuests = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnNewGuest = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGuest = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBillings = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBookings = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,30 +84,42 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabGuest = new System.Windows.Forms.TabPage();
             this.panelGuest = new System.Windows.Forms.Panel();
-            this.tabNewGuest = new System.Windows.Forms.TabPage();
-            this.panelNewGuest = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.txtCountry = new System.Windows.Forms.TextBox();
-            this.txtPostcode = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtSuburb = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
-            this.btnAddNewGuest = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtMobile = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtPostcode = new System.Windows.Forms.TextBox();
+            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtSuburb = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnResetGuest = new System.Windows.Forms.Button();
+            this.btnAddGuest = new System.Windows.Forms.Button();
+            this.btnDeleteGuest = new System.Windows.Forms.Button();
+            this.btnUpdateGuest = new System.Windows.Forms.Button();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.dgvGuests = new System.Windows.Forms.DataGridView();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.lblGuestID = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabBillings = new System.Windows.Forms.TabPage();
             this.panelBillings = new System.Windows.Forms.Panel();
             this.tabBookings = new System.Windows.Forms.TabPage();
@@ -121,6 +133,8 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cbxRoomType = new System.Windows.Forms.ComboBox();
+            this.roomTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hotelDataSet4 = new DSEDHotelBookingSystem.HotelDataSet4();
             this.label37 = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetRoom = new System.Windows.Forms.Button();
@@ -157,8 +171,6 @@
             this.label43 = new System.Windows.Forms.Label();
             this.dgvRoomType = new System.Windows.Forms.DataGridView();
             this.label38 = new System.Windows.Forms.Label();
-            this.hotelDataSet4 = new DSEDHotelBookingSystem.HotelDataSet4();
-            this.roomTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTypeTableAdapter = new DSEDHotelBookingSystem.HotelDataSet4TableAdapters.RoomTypeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -184,12 +196,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabGuest.SuspendLayout();
-            this.tabNewGuest.SuspendLayout();
-            this.panelNewGuest.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panelGuest.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGuests)).BeginInit();
+            this.panel14.SuspendLayout();
             this.tabBillings.SuspendLayout();
             this.tabBookings.SuspendLayout();
             this.tabRooms.SuspendLayout();
@@ -198,6 +212,8 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet4)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSingleBed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).BeginInit();
@@ -210,8 +226,6 @@
             this.panel12.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -284,35 +298,19 @@
             // guestsToolStripMenuItem
             // 
             this.guestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.a,
+            this.btnGuest,
             this.btnBillings,
             this.btnBookings});
             this.guestsToolStripMenuItem.Name = "guestsToolStripMenuItem";
             this.guestsToolStripMenuItem.Size = new System.Drawing.Size(81, 33);
             this.guestsToolStripMenuItem.Text = "Guests";
             // 
-            // a
+            // btnGuest
             // 
-            this.a.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGuests,
-            this.btnNewGuest});
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(162, 30);
-            this.a.Text = "Guests";
-            // 
-            // btnGuests
-            // 
-            this.btnGuests.Name = "btnGuests";
-            this.btnGuests.Size = new System.Drawing.Size(187, 30);
-            this.btnGuests.Text = "View Guests";
-            this.btnGuests.Click += new System.EventHandler(this.btnGuests_Click);
-            // 
-            // btnNewGuest
-            // 
-            this.btnNewGuest.Name = "btnNewGuest";
-            this.btnNewGuest.Size = new System.Drawing.Size(187, 30);
-            this.btnNewGuest.Text = "New Guest";
-            this.btnNewGuest.Click += new System.EventHandler(this.btnNewGuest_Click);
+            this.btnGuest.Name = "btnGuest";
+            this.btnGuest.Size = new System.Drawing.Size(162, 30);
+            this.btnGuest.Text = "Guests";
+            this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
             // btnBillings
             // 
@@ -355,7 +353,6 @@
             // 
             this.tabControl1.Controls.Add(this.tabHome);
             this.tabControl1.Controls.Add(this.tabGuest);
-            this.tabControl1.Controls.Add(this.tabNewGuest);
             this.tabControl1.Controls.Add(this.tabBillings);
             this.tabControl1.Controls.Add(this.tabBookings);
             this.tabControl1.Controls.Add(this.tabRooms);
@@ -779,261 +776,426 @@
             // 
             // panelGuest
             // 
-            this.panelGuest.Location = new System.Drawing.Point(293, 124);
+            this.panelGuest.BackColor = System.Drawing.Color.Transparent;
+            this.panelGuest.Controls.Add(this.tableLayoutPanel13);
+            this.panelGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGuest.Location = new System.Drawing.Point(3, 3);
             this.panelGuest.Name = "panelGuest";
-            this.panelGuest.Size = new System.Drawing.Size(200, 100);
-            this.panelGuest.TabIndex = 0;
+            this.panelGuest.Size = new System.Drawing.Size(1119, 536);
+            this.panelGuest.TabIndex = 2;
             // 
-            // tabNewGuest
+            // tableLayoutPanel13
             // 
-            this.tabNewGuest.Controls.Add(this.panelNewGuest);
-            this.tabNewGuest.Location = new System.Drawing.Point(4, 22);
-            this.tabNewGuest.Name = "tabNewGuest";
-            this.tabNewGuest.Size = new System.Drawing.Size(1125, 542);
-            this.tabNewGuest.TabIndex = 2;
-            this.tabNewGuest.Text = "New Guest";
-            this.tabNewGuest.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel13.Controls.Add(this.label39, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel16, 0, 1);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(1119, 536);
+            this.tableLayoutPanel13.TabIndex = 4;
             // 
-            // panelNewGuest
+            // label39
             // 
-            this.panelNewGuest.Controls.Add(this.tableLayoutPanel8);
-            this.panelNewGuest.Controls.Add(this.label33);
-            this.panelNewGuest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNewGuest.Location = new System.Drawing.Point(0, 0);
-            this.panelNewGuest.Name = "panelNewGuest";
-            this.panelNewGuest.Size = new System.Drawing.Size(1125, 542);
-            this.panelNewGuest.TabIndex = 3;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label39.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(3, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(1113, 104);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Beachfront Apartments - Guests";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel8
+            // tableLayoutPanel16
             // 
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel8.Controls.Add(this.panel7, 1, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 104);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1125, 438);
-            this.tableLayoutPanel8.TabIndex = 11;
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 1);
+            this.tableLayoutPanel16.Controls.Add(this.panel14, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 110);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 2;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1113, 423);
+            this.tableLayoutPanel16.TabIndex = 3;
             // 
-            // panel7
+            // tableLayoutPanel17
             // 
-            this.panel7.Controls.Add(this.panel11);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(228, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(669, 432);
-            this.panel7.TabIndex = 10;
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel17.Controls.Add(this.panel13, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.dgvGuests, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 45);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(1107, 375);
+            this.tableLayoutPanel17.TabIndex = 3;
             // 
-            // panel11
+            // panel13
             // 
-            this.panel11.Controls.Add(this.txtCountry);
-            this.panel11.Controls.Add(this.txtPostcode);
-            this.panel11.Controls.Add(this.txtCity);
-            this.panel11.Controls.Add(this.txtSuburb);
-            this.panel11.Controls.Add(this.label36);
-            this.panel11.Controls.Add(this.label35);
-            this.panel11.Controls.Add(this.label34);
-            this.panel11.Controls.Add(this.txtLastName);
-            this.panel11.Controls.Add(this.label27);
-            this.panel11.Controls.Add(this.txtAddress);
-            this.panel11.Controls.Add(this.numericUpDown1);
-            this.panel11.Controls.Add(this.label28);
-            this.panel11.Controls.Add(this.btnAddNewGuest);
-            this.panel11.Controls.Add(this.label29);
-            this.panel11.Controls.Add(this.txtFirstName);
-            this.panel11.Controls.Add(this.label30);
-            this.panel11.Controls.Add(this.label31);
-            this.panel11.Controls.Add(this.label32);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(669, 432);
-            this.panel11.TabIndex = 12;
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountry.Location = new System.Drawing.Point(374, 185);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(265, 35);
-            this.txtCountry.TabIndex = 16;
-            // 
-            // txtPostcode
-            // 
-            this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostcode.Location = new System.Drawing.Point(160, 185);
-            this.txtPostcode.Name = "txtPostcode";
-            this.txtPostcode.Size = new System.Drawing.Size(96, 35);
-            this.txtPostcode.TabIndex = 15;
-            // 
-            // txtCity
-            // 
-            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(395, 134);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(244, 35);
-            this.txtCity.TabIndex = 14;
-            // 
-            // txtSuburb
-            // 
-            this.txtSuburb.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuburb.Location = new System.Drawing.Point(160, 134);
-            this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(158, 35);
-            this.txtSuburb.TabIndex = 13;
-            // 
-            // label36
-            // 
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(20, 237);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(496, 35);
-            this.label36.TabIndex = 12;
-            this.label36.Text = "Number of Guests:";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label35
-            // 
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(260, 185);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(108, 35);
-            this.label35.TabIndex = 11;
-            this.label35.Text = "Country:";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label34
-            // 
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(409, 49);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(230, 22);
-            this.label34.TabIndex = 10;
-            this.label34.Text = "(last name)";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel13.Controls.Add(this.txtLastName);
+            this.panel13.Controls.Add(this.txtFirstName);
+            this.panel13.Controls.Add(this.label53);
+            this.panel13.Controls.Add(this.label41);
+            this.panel13.Controls.Add(this.label52);
+            this.panel13.Controls.Add(this.txtEmail);
+            this.panel13.Controls.Add(this.label44);
+            this.panel13.Controls.Add(this.txtMobile);
+            this.panel13.Controls.Add(this.txtPhone);
+            this.panel13.Controls.Add(this.label42);
+            this.panel13.Controls.Add(this.txtPostcode);
+            this.panel13.Controls.Add(this.txtCountry);
+            this.panel13.Controls.Add(this.label40);
+            this.panel13.Controls.Add(this.label51);
+            this.panel13.Controls.Add(this.txtCity);
+            this.panel13.Controls.Add(this.label50);
+            this.panel13.Controls.Add(this.txtSuburb);
+            this.panel13.Controls.Add(this.txtAddress);
+            this.panel13.Controls.Add(this.tableLayoutPanel18);
+            this.panel13.Controls.Add(this.label45);
+            this.panel13.Controls.Add(this.label46);
+            this.panel13.Controls.Add(this.label47);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(667, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(437, 369);
+            this.panel13.TabIndex = 13;
             // 
             // txtLastName
             // 
-            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(409, 13);
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(265, 9);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(230, 35);
-            this.txtLastName.TabIndex = 9;
-            // 
-            // label27
-            // 
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(160, 49);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(230, 22);
-            this.label27.TabIndex = 8;
-            this.label27.Text = "(first name)";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(160, 83);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(479, 35);
-            this.txtAddress.TabIndex = 3;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(525, 237);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(6);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(114, 35);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label28
-            // 
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(15, 134);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(139, 35);
-            this.label28.TabIndex = 7;
-            this.label28.Text = "Suburb:";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnAddNewGuest
-            // 
-            this.btnAddNewGuest.Location = new System.Drawing.Point(41, 315);
-            this.btnAddNewGuest.Name = "btnAddNewGuest";
-            this.btnAddNewGuest.Size = new System.Drawing.Size(598, 81);
-            this.btnAddNewGuest.TabIndex = 4;
-            this.btnAddNewGuest.Text = "Add New Guest";
-            this.btnAddNewGuest.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(15, 185);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(139, 35);
-            this.label29.TabIndex = 6;
-            this.label29.Text = "Postcode:";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtLastName.Size = new System.Drawing.Size(160, 29);
+            this.txtLastName.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(160, 13);
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(99, 9);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(230, 35);
+            this.txtFirstName.Size = new System.Drawing.Size(160, 29);
             this.txtFirstName.TabIndex = 0;
             // 
-            // label30
+            // label53
             // 
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(15, 13);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(139, 35);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Name:";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(265, 37);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(160, 16);
+            this.label53.TabIndex = 27;
+            this.label53.Text = "(last name)";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label31
+            // label41
             // 
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(325, 134);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(62, 35);
-            this.label31.TabIndex = 5;
-            this.label31.Text = "City:";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(99, 37);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(160, 16);
+            this.label41.TabIndex = 8;
+            this.label41.Text = "(first name)";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label32
+            // label52
             // 
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(15, 83);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(139, 35);
-            this.label32.TabIndex = 4;
-            this.label32.Text = "Address:";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(11, 194);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(82, 29);
+            this.label52.TabIndex = 26;
+            this.label52.Text = "Email:";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label33
+            // txtEmail
             // 
-            this.label33.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label33.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(0, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(1125, 104);
-            this.label33.TabIndex = 1;
-            this.label33.Text = "Beachfront Apartments - New Guest";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(99, 192);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(326, 29);
+            this.txtEmail.TabIndex = 9;
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(221, 160);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(82, 29);
+            this.label44.TabIndex = 24;
+            this.label44.Text = "Mobile:";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtMobile
+            // 
+            this.txtMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.Location = new System.Drawing.Point(309, 159);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(116, 29);
+            this.txtMobile.TabIndex = 8;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(99, 159);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(116, 29);
+            this.txtPhone.TabIndex = 7;
+            // 
+            // label42
+            // 
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(11, 160);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(82, 29);
+            this.label42.TabIndex = 21;
+            this.label42.Text = "Phone:";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtPostcode
+            // 
+            this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostcode.Location = new System.Drawing.Point(99, 126);
+            this.txtPostcode.Name = "txtPostcode";
+            this.txtPostcode.Size = new System.Drawing.Size(76, 29);
+            this.txtPostcode.TabIndex = 5;
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountry.Location = new System.Drawing.Point(265, 126);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(160, 29);
+            this.txtCountry.TabIndex = 6;
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(172, 126);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(87, 29);
+            this.label40.TabIndex = 19;
+            this.label40.Text = "Country:";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label51
+            // 
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(-7, 127);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(100, 29);
+            this.label51.TabIndex = 17;
+            this.label51.Text = "Postcode:";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(278, 93);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(147, 29);
+            this.txtCity.TabIndex = 4;
+            // 
+            // label50
+            // 
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(221, 93);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(51, 29);
+            this.label50.TabIndex = 15;
+            this.label50.Text = "City:";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtSuburb
+            // 
+            this.txtSuburb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuburb.Location = new System.Drawing.Point(99, 93);
+            this.txtSuburb.Name = "txtSuburb";
+            this.txtSuburb.Size = new System.Drawing.Size(116, 29);
+            this.txtSuburb.TabIndex = 3;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(99, 60);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(326, 29);
+            this.txtAddress.TabIndex = 2;
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 4;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel18.Controls.Add(this.btnResetGuest, 3, 0);
+            this.tableLayoutPanel18.Controls.Add(this.btnAddGuest, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.btnDeleteGuest, 2, 0);
+            this.tableLayoutPanel18.Controls.Add(this.btnUpdateGuest, 1, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 233);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(437, 136);
+            this.tableLayoutPanel18.TabIndex = 11;
+            // 
+            // btnResetGuest
+            // 
+            this.btnResetGuest.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.reset;
+            this.btnResetGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnResetGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnResetGuest.Location = new System.Drawing.Point(330, 3);
+            this.btnResetGuest.Name = "btnResetGuest";
+            this.btnResetGuest.Size = new System.Drawing.Size(104, 130);
+            this.btnResetGuest.TabIndex = 11;
+            this.btnResetGuest.UseVisualStyleBackColor = true;
+            this.btnResetGuest.Click += new System.EventHandler(this.btnResetGuest_Click);
+            // 
+            // btnAddGuest
+            // 
+            this.btnAddGuest.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.add;
+            this.btnAddGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddGuest.Location = new System.Drawing.Point(3, 3);
+            this.btnAddGuest.Name = "btnAddGuest";
+            this.btnAddGuest.Size = new System.Drawing.Size(103, 130);
+            this.btnAddGuest.TabIndex = 4;
+            this.btnAddGuest.UseVisualStyleBackColor = true;
+            this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
+            // 
+            // btnDeleteGuest
+            // 
+            this.btnDeleteGuest.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.delete;
+            this.btnDeleteGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteGuest.Location = new System.Drawing.Point(221, 3);
+            this.btnDeleteGuest.Name = "btnDeleteGuest";
+            this.btnDeleteGuest.Size = new System.Drawing.Size(103, 130);
+            this.btnDeleteGuest.TabIndex = 10;
+            this.btnDeleteGuest.UseVisualStyleBackColor = true;
+            this.btnDeleteGuest.Click += new System.EventHandler(this.btnDeleteGuest_Click);
+            // 
+            // btnUpdateGuest
+            // 
+            this.btnUpdateGuest.BackgroundImage = global::DSEDHotelBookingSystem.Resource1.update;
+            this.btnUpdateGuest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdateGuest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnUpdateGuest.Location = new System.Drawing.Point(112, 3);
+            this.btnUpdateGuest.Name = "btnUpdateGuest";
+            this.btnUpdateGuest.Size = new System.Drawing.Size(103, 130);
+            this.btnUpdateGuest.TabIndex = 9;
+            this.btnUpdateGuest.UseVisualStyleBackColor = true;
+            this.btnUpdateGuest.Click += new System.EventHandler(this.btnUpdateGuest_Click);
+            // 
+            // label45
+            // 
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(19, 9);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(74, 29);
+            this.label45.TabIndex = 1;
+            this.label45.Text = "Name:";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label46
+            // 
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(7, 90);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(86, 29);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Suburb:";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label47
+            // 
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(3, 61);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(90, 29);
+            this.label47.TabIndex = 4;
+            this.label47.Text = "Address:";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dgvGuests
+            // 
+            this.dgvGuests.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGuests.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvGuests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGuests.Location = new System.Drawing.Point(3, 3);
+            this.dgvGuests.Name = "dgvGuests";
+            this.dgvGuests.RowTemplate.Height = 30;
+            this.dgvGuests.Size = new System.Drawing.Size(658, 369);
+            this.dgvGuests.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.lblGuestID);
+            this.panel14.Controls.Add(this.label49);
+            this.panel14.Controls.Add(this.comboBox2);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1107, 36);
+            this.panel14.TabIndex = 5;
+            // 
+            // lblGuestID
+            // 
+            this.lblGuestID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblGuestID.Location = new System.Drawing.Point(308, 5);
+            this.lblGuestID.Name = "lblGuestID";
+            this.lblGuestID.Size = new System.Drawing.Size(71, 26);
+            this.lblGuestID.TabIndex = 13;
+            // 
+            // label49
+            // 
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(7, 6);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(102, 28);
+            this.label49.TabIndex = 0;
+            this.label49.Text = "View Rooms:";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "All Rooms",
+            "Single",
+            "Double",
+            "Family"});
+            this.comboBox2.Location = new System.Drawing.Point(115, 5);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(187, 28);
+            this.comboBox2.TabIndex = 2;
             // 
             // tabBillings
             // 
@@ -1188,6 +1350,16 @@
             this.cbxRoomType.Size = new System.Drawing.Size(281, 32);
             this.cbxRoomType.TabIndex = 3;
             this.cbxRoomType.ValueMember = "RoomTypeID";
+            // 
+            // roomTypeBindingSource
+            // 
+            this.roomTypeBindingSource.DataMember = "RoomType";
+            this.roomTypeBindingSource.DataSource = this.hotelDataSet4;
+            // 
+            // hotelDataSet4
+            // 
+            this.hotelDataSet4.DataSetName = "HotelDataSet4";
+            this.hotelDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label37
             // 
@@ -1375,23 +1547,23 @@
             // dgvRooms
             // 
             this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRooms.Location = new System.Drawing.Point(3, 3);
             this.dgvRooms.Name = "dgvRooms";
@@ -1492,36 +1664,36 @@
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 428F));
             this.tableLayoutPanel14.Size = new System.Drawing.Size(1119, 428);
             this.tableLayoutPanel14.TabIndex = 3;
             // 
@@ -1633,23 +1805,23 @@
             // dgvRoomType
             // 
             this.dgvRoomType.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvRoomType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoomType.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRoomType.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvRoomType.Location = new System.Drawing.Point(3, 3);
             this.dgvRoomType.Name = "dgvRoomType";
             this.dgvRoomType.RowTemplate.Height = 30;
@@ -1669,16 +1841,6 @@
             this.label38.Text = "Beachfront Apartments - Room Types";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // hotelDataSet4
-            // 
-            this.hotelDataSet4.DataSetName = "HotelDataSet4";
-            this.hotelDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomTypeBindingSource
-            // 
-            this.roomTypeBindingSource.DataMember = "RoomType";
-            this.roomTypeBindingSource.DataSource = this.hotelDataSet4;
-            // 
             // roomTypeTableAdapter
             // 
             this.roomTypeTableAdapter.ClearBeforeFill = true;
@@ -1693,7 +1855,6 @@
             this.MinimumSize = new System.Drawing.Size(1149, 648);
             this.Name = "Form1";
             this.Text = "Hotel Booking System";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -1724,13 +1885,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tabGuest.ResumeLayout(false);
-            this.tabNewGuest.ResumeLayout(false);
-            this.panelNewGuest.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panelGuest.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGuests)).EndInit();
+            this.panel14.ResumeLayout(false);
             this.tabBillings.ResumeLayout(false);
             this.tabBookings.ResumeLayout(false);
             this.tabBookings.PerformLayout();
@@ -1741,6 +1904,8 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet4)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudSingleBed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQueenBed)).EndInit();
@@ -1754,8 +1919,6 @@
             this.panel12.PerformLayout();
             this.tableLayoutPanel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hotelDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTypeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1765,15 +1928,13 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem guestsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem a;
+        private System.Windows.Forms.ToolStripMenuItem btnGuest;
         private System.Windows.Forms.ToolStripMenuItem btnBillings;
         private System.Windows.Forms.ToolStripMenuItem btnBookings;
         private System.Windows.Forms.ToolStripMenuItem roomsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnRooms;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
-        private System.Windows.Forms.ToolStripMenuItem btnNewGuest;
-        private System.Windows.Forms.ToolStripMenuItem btnGuests;
         private System.Windows.Forms.ToolStripMenuItem btnHome;
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Label label3;
@@ -1810,39 +1971,14 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabHome;
         private System.Windows.Forms.TabPage tabGuest;
-        private System.Windows.Forms.TabPage tabNewGuest;
         private System.Windows.Forms.TabPage tabBillings;
         private System.Windows.Forms.TabPage tabBookings;
         private System.Windows.Forms.TabPage tabRooms;
-        private System.Windows.Forms.Panel panelGuest;
         private System.Windows.Forms.Panel panelBillings;
         private System.Windows.Forms.Panel panelBookings;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panelRooms;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panelNewGuest;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Button btnAddNewGuest;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox txtCountry;
-        private System.Windows.Forms.TextBox txtPostcode;
-        private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.TextBox txtSuburb;
         private System.Windows.Forms.ComboBox cbxViewRooms;
         private System.Windows.Forms.DataGridView dgvRooms;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
@@ -1888,6 +2024,43 @@
         private HotelDataSet4 hotelDataSet4;
         private System.Windows.Forms.BindingSource roomTypeBindingSource;
         private HotelDataSet4TableAdapters.RoomTypeTableAdapter roomTypeTableAdapter;
+        private System.Windows.Forms.Panel panelGuest;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.Button btnResetGuest;
+        private System.Windows.Forms.Button btnAddGuest;
+        private System.Windows.Forms.Button btnDeleteGuest;
+        private System.Windows.Forms.Button btnUpdateGuest;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.DataGridView dgvGuests;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label lblGuestID;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox txtMobile;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox txtPostcode;
+        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txtSuburb;
+        private System.Windows.Forms.Label label53;
     }
 }
 

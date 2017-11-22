@@ -14,6 +14,9 @@ namespace DSEDHotelBookingSystem.Database
         public int Sleeps { get; set; }
         public int Cost { get; set; }
         public int RoomType { get; set; }
+
+
+        #region Types of Rooms
         public IEnumerable AllRooms()
         {
             //What ever we want our code to do we do it in here
@@ -109,6 +112,7 @@ namespace DSEDHotelBookingSystem.Database
                 return alldata.ToList();
             }
         }
+        #endregion
 
         public void InsertRoom()
         {
