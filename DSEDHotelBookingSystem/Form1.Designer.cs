@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -89,23 +89,30 @@
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPostcode = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtSuburb = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.txtPostcode = new System.Windows.Forms.TextBox();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.txtSuburb = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
             this.btnResetGuest = new System.Windows.Forms.Button();
@@ -172,6 +179,10 @@
             this.dgvRoomType = new System.Windows.Forms.DataGridView();
             this.label38 = new System.Windows.Forms.Label();
             this.roomTypeTableAdapter = new DSEDHotelBookingSystem.HotelDataSet4TableAdapters.RoomTypeTableAdapter();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -842,23 +853,32 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.label35);
+            this.panel13.Controls.Add(this.label34);
+            this.panel13.Controls.Add(this.label32);
+            this.panel13.Controls.Add(this.txtCity);
+            this.panel13.Controls.Add(this.txtEmail);
+            this.panel13.Controls.Add(this.txtPostcode);
+            this.panel13.Controls.Add(this.label50);
+            this.panel13.Controls.Add(this.label33);
+            this.panel13.Controls.Add(this.txtSuburb);
+            this.panel13.Controls.Add(this.label31);
+            this.panel13.Controls.Add(this.label30);
+            this.panel13.Controls.Add(this.label29);
+            this.panel13.Controls.Add(this.label28);
+            this.panel13.Controls.Add(this.label27);
             this.panel13.Controls.Add(this.txtLastName);
             this.panel13.Controls.Add(this.txtFirstName);
             this.panel13.Controls.Add(this.label53);
             this.panel13.Controls.Add(this.label41);
             this.panel13.Controls.Add(this.label52);
-            this.panel13.Controls.Add(this.txtEmail);
             this.panel13.Controls.Add(this.label44);
             this.panel13.Controls.Add(this.txtMobile);
             this.panel13.Controls.Add(this.txtPhone);
             this.panel13.Controls.Add(this.label42);
-            this.panel13.Controls.Add(this.txtPostcode);
             this.panel13.Controls.Add(this.txtCountry);
             this.panel13.Controls.Add(this.label40);
             this.panel13.Controls.Add(this.label51);
-            this.panel13.Controls.Add(this.txtCity);
-            this.panel13.Controls.Add(this.label50);
-            this.panel13.Controls.Add(this.txtSuburb);
             this.panel13.Controls.Add(this.txtAddress);
             this.panel13.Controls.Add(this.tableLayoutPanel18);
             this.panel13.Controls.Add(this.label45);
@@ -869,6 +889,125 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(437, 369);
             this.panel13.TabIndex = 13;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(278, 93);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(147, 29);
+            this.txtCity.TabIndex = 4;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(99, 192);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(326, 29);
+            this.txtEmail.TabIndex = 9;
+            // 
+            // txtPostcode
+            // 
+            this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostcode.Location = new System.Drawing.Point(99, 126);
+            this.txtPostcode.Name = "txtPostcode";
+            this.txtPostcode.Size = new System.Drawing.Size(76, 29);
+            this.txtPostcode.TabIndex = 5;
+            // 
+            // label50
+            // 
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(232, 93);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(51, 29);
+            this.label50.TabIndex = 15;
+            this.label50.Text = "City:";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(175, 128);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(17, 24);
+            this.label33.TabIndex = 34;
+            this.label33.Text = "*";
+            // 
+            // txtSuburb
+            // 
+            this.txtSuburb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuburb.Location = new System.Drawing.Point(99, 93);
+            this.txtSuburb.Name = "txtSuburb";
+            this.txtSuburb.Size = new System.Drawing.Size(116, 29);
+            this.txtSuburb.TabIndex = 3;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(226, 95);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(17, 24);
+            this.label32.TabIndex = 33;
+            this.label32.Text = "*";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Red;
+            this.label31.Location = new System.Drawing.Point(27, 195);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(17, 24);
+            this.label31.TabIndex = 32;
+            this.label31.Text = "*";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Red;
+            this.label30.Location = new System.Drawing.Point(-5, 129);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(17, 24);
+            this.label30.TabIndex = 31;
+            this.label30.Text = "*";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Red;
+            this.label29.Location = new System.Drawing.Point(11, 92);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(17, 24);
+            this.label29.TabIndex = 30;
+            this.label29.Text = "*";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Red;
+            this.label28.Location = new System.Drawing.Point(3, 63);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(17, 24);
+            this.label28.TabIndex = 29;
+            this.label28.Text = "*";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(21, 12);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(17, 24);
+            this.label27.TabIndex = 28;
+            this.label27.Text = "*";
             // 
             // txtLastName
             // 
@@ -909,20 +1048,12 @@
             // label52
             // 
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(11, 194);
+            this.label52.Location = new System.Drawing.Point(19, 194);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(82, 29);
             this.label52.TabIndex = 26;
             this.label52.Text = "Email:";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(99, 192);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(326, 29);
-            this.txtEmail.TabIndex = 9;
             // 
             // label44
             // 
@@ -953,20 +1084,12 @@
             // label42
             // 
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(11, 160);
+            this.label42.Location = new System.Drawing.Point(19, 160);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(82, 29);
             this.label42.TabIndex = 21;
             this.label42.Text = "Phone:";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtPostcode
-            // 
-            this.txtPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostcode.Location = new System.Drawing.Point(99, 126);
-            this.txtPostcode.Name = "txtPostcode";
-            this.txtPostcode.Size = new System.Drawing.Size(76, 29);
-            this.txtPostcode.TabIndex = 5;
             // 
             // txtCountry
             // 
@@ -979,7 +1102,7 @@
             // label40
             // 
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(172, 126);
+            this.label40.Location = new System.Drawing.Point(180, 126);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(87, 29);
             this.label40.TabIndex = 19;
@@ -989,38 +1112,12 @@
             // label51
             // 
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(-7, 127);
+            this.label51.Location = new System.Drawing.Point(1, 127);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(100, 29);
             this.label51.TabIndex = 17;
             this.label51.Text = "Postcode:";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtCity
-            // 
-            this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(278, 93);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(147, 29);
-            this.txtCity.TabIndex = 4;
-            // 
-            // label50
-            // 
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(221, 93);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(51, 29);
-            this.label50.TabIndex = 15;
-            this.label50.Text = "City:";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtSuburb
-            // 
-            this.txtSuburb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuburb.Location = new System.Drawing.Point(99, 93);
-            this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(116, 29);
-            this.txtSuburb.TabIndex = 3;
             // 
             // txtAddress
             // 
@@ -1100,7 +1197,7 @@
             // label45
             // 
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(19, 9);
+            this.label45.Location = new System.Drawing.Point(27, 9);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(74, 29);
             this.label45.TabIndex = 1;
@@ -1110,7 +1207,7 @@
             // label46
             // 
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(7, 90);
+            this.label46.Location = new System.Drawing.Point(15, 90);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(86, 29);
             this.label46.TabIndex = 5;
@@ -1120,7 +1217,7 @@
             // label47
             // 
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(3, 61);
+            this.label47.Location = new System.Drawing.Point(11, 61);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(90, 29);
             this.label47.TabIndex = 4;
@@ -1130,23 +1227,23 @@
             // dgvGuests
             // 
             this.dgvGuests.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvGuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGuests.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGuests.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvGuests.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGuests.Location = new System.Drawing.Point(3, 3);
             this.dgvGuests.Name = "dgvGuests";
@@ -1158,6 +1255,8 @@
             // 
             // panel14
             // 
+            this.panel14.Controls.Add(this.label48);
+            this.panel14.Controls.Add(this.label36);
             this.panel14.Controls.Add(this.lblGuestID);
             this.panel14.Controls.Add(this.label49);
             this.panel14.Controls.Add(this.comboBox2);
@@ -1549,23 +1648,23 @@
             // dgvRooms
             // 
             this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRooms.Location = new System.Drawing.Point(3, 3);
             this.dgvRooms.Name = "dgvRooms";
@@ -1807,23 +1906,23 @@
             // dgvRoomType
             // 
             this.dgvRoomType.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvRoomType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRoomType.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRoomType.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvRoomType.Location = new System.Drawing.Point(3, 3);
             this.dgvRoomType.Name = "dgvRoomType";
             this.dgvRoomType.RowTemplate.Height = 30;
@@ -1846,6 +1945,50 @@
             // roomTypeTableAdapter
             // 
             this.roomTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Red;
+            this.label34.Location = new System.Drawing.Point(17, 162);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(15, 24);
+            this.label34.TabIndex = 35;
+            this.label34.Text = "!";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Red;
+            this.label35.Location = new System.Drawing.Point(218, 162);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(15, 24);
+            this.label35.TabIndex = 36;
+            this.label35.Text = "!";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Red;
+            this.label36.Location = new System.Drawing.Point(668, 5);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(141, 24);
+            this.label36.TabIndex = 37;
+            this.label36.Text = "* required fields";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.Red;
+            this.label48.Location = new System.Drawing.Point(812, 5);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(289, 24);
+            this.label48.TabIndex = 38;
+            this.label48.Text = "! at least one field must be filled in";
             // 
             // Form1
             // 
@@ -1896,6 +2039,7 @@
             this.tableLayoutPanel18.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuests)).EndInit();
             this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.tabBillings.ResumeLayout(false);
             this.tabBookings.ResumeLayout(false);
             this.tabBookings.PerformLayout();
@@ -2063,6 +2207,17 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.TextBox txtSuburb;
         private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label36;
     }
 }
 

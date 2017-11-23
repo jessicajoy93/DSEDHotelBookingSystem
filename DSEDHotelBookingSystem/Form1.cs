@@ -97,12 +97,38 @@ namespace DSEDHotelBookingSystem
 
         private void btnAddGuest_Click(object sender, EventArgs e)
         {
-            GuestValues();
-            myGuests.InsertGuest();
-            AllGuests();
-            ResetGuest();
+            InsertOrUpdateGuest();
         }
 
+        private void InsertOrUpdateGuest()
+        {
+
+            if (txtFirstName.Text != "" && txtLastName.Text != "" && txtAddress.Text != "" && txtSuburb.Text != "" && txtCity.Text != "" && txtPostcode.Text != "" && txtCountry.Text != "" && (txtPhone.Text != "" || txtMobile.Text != "") && txtEmail.Text != "")
+            {
+                if (lblGuestID.Text == "")
+                {
+                    // add a new guest
+                    GuestValues();
+                    myGuests.InsertGuest();
+                    AllGuests();
+                    ResetGuest();
+                }
+                else if (lblGuestID.Text != "")
+                {
+                    // update a guest
+                    GuestID();
+                    GuestValues();
+                    myGuests.UpdateGuest();
+                    AllGuests();
+                    ResetGuest();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill in the missing fields");
+            }
+        }
 
 
         private void GuestID()
@@ -127,11 +153,7 @@ namespace DSEDHotelBookingSystem
 
         private void btnUpdateGuest_Click(object sender, EventArgs e)
         {
-            GuestID();
-            GuestValues();
-            myGuests.UpdateGuest();
-            AllGuests();
-            ResetGuest();
+            InsertOrUpdateGuest();
         }
 
         private void btnDeleteGuest_Click(object sender, EventArgs e)
@@ -509,8 +531,8 @@ namespace DSEDHotelBookingSystem
             this.roomTypeTableAdapter.Fill(this.hotelDataSet4.RoomType);
 
         }
-        #endregion
 
+        #endregion
 
     }
 }
