@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DSEDHotelBookingSystem.Database
 {
@@ -62,6 +63,61 @@ namespace DSEDHotelBookingSystem.Database
 
                 context.Guests.Add(g);
                 context.SaveChanges();
+            }
+        }
+
+        public void UpdateGuest()
+        {
+            using (var context = new HotelEntities())
+            {
+                var query = from g in context.Guests where g.GuestID == GuestID select g;
+
+                var guest = query.FirstOrDefault(); //gets the first one
+                guest.FirstName = FirstName;
+                guest.LastName = LastName;
+                guest.Address = Address;
+                guest.Suburb = Suburb;
+                guest.City = City;
+                guest.Postcode = Postcode;
+                guest.Country = Country;
+                guest.Phone = Phone;
+                guest.Mobile = Mobile;
+                guest.Email = Email;
+
+                context.SaveChanges();
+            }
+        }
+
+        public void DeleteGuest()
+        {
+
+            // Our stanard using statement passing all the data to context
+
+            string name = FirstName + " " + LastName;
+
+            if (MessageBox.Show("Do you REALLY want to delete " + name + "?", "Delete Record",
+                    MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                return;
+            }
+            try
+            {
+                using (var context = new HotelEntities())
+                {
+                    // Select the row you want to delete
+                    int id = GuestID;
+                    var guest = (from g in context.Guests where g.GuestID == id select g).SingleOrDefault();
+
+                    // run remove command
+                    context.Guests.Remove(guest);
+
+                    // Save the changes
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Guest has already been deleted or another error has occured\n\n" + e);
             }
         }
     }

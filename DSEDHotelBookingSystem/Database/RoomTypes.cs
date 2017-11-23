@@ -83,7 +83,7 @@ namespace DSEDHotelBookingSystem.Database
             }
             catch (Exception e)
             {
-                MessageBox.Show("Room has already been deleted or another error has occured\n\n" + e);
+                MessageBox.Show("Room Type has already been deleted or another error has occured\n\n" + e);
             }
         }
     }

@@ -29,6 +29,7 @@ namespace DSEDHotelBookingSystem
 
         }
 
+        #region Tab Control Header Hidden
         private void TabControlHeaderHidden()
         {
             // Hides the Tab Control Headers
@@ -36,14 +37,15 @@ namespace DSEDHotelBookingSystem
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
         }
+        #endregion
 
+        #region Home
         private void btnHome_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
             tabHome.Visible = true;
         }
-
-
+        #endregion
 
         #region Exit Application
 
@@ -101,20 +103,7 @@ namespace DSEDHotelBookingSystem
             ResetGuest();
         }
 
-        private void ResetGuest()
-        {
-            lblGuestID.Text = "";
-            txtFirstName.Text = "";
-            txtLastName.Text = "";
-            txtAddress.Text = "";
-            txtSuburb.Text = "";
-            txtCity.Text = "";
-            txtPostcode.Text = "";
-            txtCountry.Text = "";
-            txtPhone.Text = "";
-            txtMobile.Text = "";
-            txtEmail.Text = "";
-        }
+
 
         private void GuestID()
         {
@@ -138,12 +127,27 @@ namespace DSEDHotelBookingSystem
 
         private void btnUpdateGuest_Click(object sender, EventArgs e)
         {
-
+            GuestID();
+            GuestValues();
+            myGuests.UpdateGuest();
+            AllGuests();
+            ResetGuest();
         }
 
         private void btnDeleteGuest_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                GuestID();
+                GuestValues();
+                myGuests.DeleteGuest();
+                AllGuests();
+                ResetGuest();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please select a guest before deleting\n\n" + ex);
+            }
         }
 
         private void btnResetGuest_Click(object sender, EventArgs e)
@@ -259,7 +263,7 @@ namespace DSEDHotelBookingSystem
             myRooms.InsertRoom();
             ComboboxViewRoomsSelected();
 
-            Reset();
+            ResetRoom();
         }
 
         private void btnEditRoom_Click(object sender, EventArgs e)
@@ -270,7 +274,7 @@ namespace DSEDHotelBookingSystem
 
             ComboboxViewRoomsSelected();
 
-            Reset();
+            ResetRoom();
         }
 
         private void btnDeleteRoom_Click(object sender, EventArgs e)
@@ -281,7 +285,7 @@ namespace DSEDHotelBookingSystem
                 RoomID();
                 myRooms.DeleteRoom();
                 ComboboxViewRoomsSelected();
-                Reset();
+                ResetRoom();
             }
             catch (Exception ex)
             {
@@ -294,7 +298,7 @@ namespace DSEDHotelBookingSystem
         {
             NewRoomValues();
             ComboboxViewRoomsSelected();
-            Reset();
+            ResetRoom();
         }
 
         private void RoomID()
@@ -357,7 +361,7 @@ namespace DSEDHotelBookingSystem
 
         private void btnResetRoomType_Click(object sender, EventArgs e)
         {
-            Reset();
+            ResetRoomType();
         }
 
         private void RoomTypeDataValidation()
@@ -375,7 +379,7 @@ namespace DSEDHotelBookingSystem
                 myRoomTypes.InsertRoomType();
                 RoomType();
 
-                Reset();
+                ResetRoomType();
             }
         }
 
@@ -388,7 +392,7 @@ namespace DSEDHotelBookingSystem
             RoomType();
 
 
-            Reset();
+            ResetRoomType();
         }
 
         private void btnDeleteRoomType_Click(object sender, EventArgs e)
@@ -399,7 +403,7 @@ namespace DSEDHotelBookingSystem
                 RoomTypeID();
                 myRoomTypes.DeleteRoomType();
                 RoomType();
-                Reset();
+                ResetRoomType();
             }
             catch (Exception ex)
             {
@@ -424,8 +428,7 @@ namespace DSEDHotelBookingSystem
         #endregion
 
         #region Reset
-
-        private void Reset()
+        private void ResetRoom()
         {
             // Room
             lblRoomID.Text = "";
@@ -433,10 +436,29 @@ namespace DSEDHotelBookingSystem
             txtRoomCost.Text = "";
             nudQueenBed.Text = "0";
             nudSingleBed.Text = "0";
+        }
 
+        private void ResetRoomType()
+        {
             // Room Type
             lblRoomTypeID.Text = "";
             txtRoomType.Text = "";
+        }
+
+        private void ResetGuest()
+        {
+            // Guest
+            lblGuestID.Text = "";
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtAddress.Text = "";
+            txtSuburb.Text = "";
+            txtCity.Text = "";
+            txtPostcode.Text = "";
+            txtCountry.Text = "";
+            txtPhone.Text = "";
+            txtMobile.Text = "";
+            txtEmail.Text = "";
         }
 
         #endregion
@@ -461,11 +483,25 @@ namespace DSEDHotelBookingSystem
             txtRoomType.Text = dgvRoomType.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
-
+        // Data Grid View - Guests - Content Click
+        private void dgvGuests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblGuestID.Text = dgvGuests.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtFirstName.Text = dgvGuests.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtLastName.Text = dgvGuests.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtAddress.Text = dgvGuests.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSuburb.Text = dgvGuests.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtCity.Text = dgvGuests.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtPostcode.Text = dgvGuests.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtCountry.Text = dgvGuests.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtPhone.Text = dgvGuests.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtMobile.Text = dgvGuests.Rows[e.RowIndex].Cells[9].Value.ToString();
+            txtEmail.Text = dgvGuests.Rows[e.RowIndex].Cells[10].Value.ToString();
+        }
 
         #endregion
 
-
+        #region Form1 Load
         // Makes Combobox data work
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -473,6 +509,7 @@ namespace DSEDHotelBookingSystem
             this.roomTypeTableAdapter.Fill(this.hotelDataSet4.RoomType);
 
         }
+        #endregion
 
 
     }
