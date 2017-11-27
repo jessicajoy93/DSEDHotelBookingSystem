@@ -12,6 +12,7 @@ namespace DSEDHotelBookingSystem.Database
     {
         public int RoomTypeID { get; set; }
         public string Room_Type { get; set; }
+
         public IEnumerable RoomType()
         {
             //What ever we want our code to do we do it in here

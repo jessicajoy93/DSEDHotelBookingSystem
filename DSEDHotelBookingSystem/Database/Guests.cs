@@ -10,9 +10,15 @@ namespace DSEDHotelBookingSystem.Database
 {
     class Guests
     {
+        public Guests()
+        {
+
+        }
+
         public int GuestID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string FullName { get; set; }
         public string Address { get; set; }
         public string Suburb { get; set; }
         public string City { get; set; }
@@ -21,6 +27,8 @@ namespace DSEDHotelBookingSystem.Database
         public string Phone { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }
+
+
 
         public IEnumerable AllGuests()
         {
@@ -52,6 +60,7 @@ namespace DSEDHotelBookingSystem.Database
                 var g = new Guest();
                 g.FirstName = FirstName;
                 g.LastName = LastName;
+                g.FullName = FullName;
                 g.Address = Address;
                 g.Suburb = Suburb;
                 g.City = City;
@@ -75,6 +84,7 @@ namespace DSEDHotelBookingSystem.Database
                 var guest = query.FirstOrDefault(); //gets the first one
                 guest.FirstName = FirstName;
                 guest.LastName = LastName;
+                guest.FullName = FullName;
                 guest.Address = Address;
                 guest.Suburb = Suburb;
                 guest.City = City;

@@ -18,6 +18,7 @@ namespace DSEDHotelBookingSystem
         Rooms myRooms = new Rooms();
         RoomTypes myRoomTypes = new RoomTypes();
         Guests myGuests = new Guests();
+        Bookings myBookings = new Bookings();
 
         public Form1()
         {
@@ -140,6 +141,7 @@ namespace DSEDHotelBookingSystem
         {
             myGuests.FirstName = txtFirstName.Text;
             myGuests.LastName = txtLastName.Text;
+            myGuests.FullName = myGuests.FirstName + " " + myGuests.LastName;
             myGuests.Address = txtAddress.Text;
             myGuests.Suburb = txtSuburb.Text;
             myGuests.City = txtCity.Text;
@@ -196,6 +198,40 @@ namespace DSEDHotelBookingSystem
         {
             HideTabHeaders();
             tabBookings.Visible = true;
+            Date();
+        }
+
+        private void Date()
+        {
+            myBookings.CheckIn = dateCheckIn.Value;
+            myBookings.CheckOut = myBookings.CheckIn.AddDays(1);
+            dateCheckOut.Value = myBookings.CheckOut;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            AvailableRoomsValues();
+            AvailableRooms();
+
+        }
+
+        public void AvailableRooms()
+        {
+
+            dgvRoomsAvailable.DataSource = myBookings.AllAvailableRooms();
+
+            //RoomTypesDgvColumnHeaders();
+        }
+
+        private void AvailableRoomsValues()
+        {
+            myBookings.GuestID = (int)cbxGuestName.SelectedValue;
+            myBookings.NumOfGuests = Convert.ToInt32(nudNumOfGuests.Text);
+        }
+
+        private void dateCheckIn_ValueChanged(object sender, EventArgs e)
+        {
+            Date();
         }
 
         #endregion
@@ -281,22 +317,42 @@ namespace DSEDHotelBookingSystem
 
         private void btnNewRoom_Click(object sender, EventArgs e)
         {
-            NewRoomValues();
-            myRooms.InsertRoom();
-            ComboboxViewRoomsSelected();
+            InsertOrUpdateRoom();
+        }
 
-            ResetRoom();
+        private void InsertOrUpdateRoom()
+        {
+
+            if (txtRoomName.Text != "" && (nudSingleBed.Text != "0" || nudQueenBed.Text != "0") && txtRoomCost.Text != "")
+            {
+                if (lblRoomID.Text == "")
+                {
+                    //Insert Room
+                    NewRoomValues();
+                    myRooms.InsertRoom();
+                    ComboboxViewRoomsSelected();
+                    ResetRoom();
+                }
+                else if (lblRoomID.Text != "")
+                {
+                    //Update Room
+                    NewRoomValues();
+                    RoomID();
+                    myRooms.UpdateRoom();
+                    ComboboxViewRoomsSelected();
+                    ResetRoom();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill in the missing fields");
+            }
         }
 
         private void btnEditRoom_Click(object sender, EventArgs e)
         {
-            NewRoomValues();
-
-            myRooms.UpdateRoom();
-
-            ComboboxViewRoomsSelected();
-
-            ResetRoom();
+            InsertOrUpdateRoom();
         }
 
         private void btnDeleteRoom_Click(object sender, EventArgs e)
@@ -377,8 +433,35 @@ namespace DSEDHotelBookingSystem
 
         private void btnNewRoomType_Click(object sender, EventArgs e)
         {
-            NewRoomTypeValues();
-            RoomTypeDataValidation();
+            InsertOrUpdateRoomType();
+        }
+
+        private void InsertOrUpdateRoomType()
+        {
+
+            if (txtRoomType.Text != "")
+            {
+                if (lblRoomTypeID.Text == "")
+                {
+                    //Insert Room
+                    NewRoomTypeValues();
+                    RoomTypeDataValidation();
+                }
+                else if (lblRoomTypeID.Text != "")
+                {
+                    //Update Room
+                    NewRoomTypeValues();
+                    RoomTypeID();
+                    myRoomTypes.UpdateRoomType();
+                    RoomType();
+                    ResetRoomType();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill in the missing fields");
+            }
         }
 
         private void btnResetRoomType_Click(object sender, EventArgs e)
@@ -392,10 +475,7 @@ namespace DSEDHotelBookingSystem
             {
                 MessageBox.Show("Please enter some text first.");
             }
-            else if (VScroll)
-            {
 
-            }
             else
             {
                 myRoomTypes.InsertRoomType();
@@ -407,14 +487,7 @@ namespace DSEDHotelBookingSystem
 
         private void btnEditRoomType_Click(object sender, EventArgs e)
         {
-            NewRoomTypeValues();
-            RoomTypeID();
-            myRoomTypes.UpdateRoomType();
-
-            RoomType();
-
-
-            ResetRoomType();
+            InsertOrUpdateRoomType();
         }
 
         private void btnDeleteRoomType_Click(object sender, EventArgs e)
@@ -521,18 +594,52 @@ namespace DSEDHotelBookingSystem
             txtEmail.Text = dgvGuests.Rows[e.RowIndex].Cells[10].Value.ToString();
         }
 
+        // Available Rooms
+        private void dgvRoomsAvailable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblAvailableRoomID.Text = dgvRoomsAvailable.Rows[e.RowIndex].Cells[0].Value.ToString();
+        }
         #endregion
 
         #region Form1 Load
         // Makes Combobox data work
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hotelDataSet7.Guests' table. You can move, or remove it, as needed.
+            this.guestsTableAdapter.Fill(this.hotelDataSet7.Guests);
             // TODO: This line of code loads data into the 'hotelDataSet4.RoomType' table. You can move, or remove it, as needed.
             this.roomTypeTableAdapter.Fill(this.hotelDataSet4.RoomType);
 
         }
 
+
+
         #endregion
 
+        private void btnBook_Click(object sender, EventArgs e)
+        {
+            InsertOrUpdateBooking();
+        }
+
+        private void InsertOrUpdateBooking()
+        {
+            if (lblAvailableRoomID.Text == "")
+            {
+                //Insert Room
+                AvailableRoomsValues();
+                myBookings.NewBooking();
+                AvailableRooms();
+
+            }
+            //else if (lblAvailableRoomID.Text != "")
+            //{
+            //    //Update Room
+            //    NewRoomValues();
+            //    RoomID();
+            //    myRooms.UpdateRoom();
+            //    ComboboxViewRoomsSelected();
+            //    ResetRoom();
+            //}
+        }
     }
 }

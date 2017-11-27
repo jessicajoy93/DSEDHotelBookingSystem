@@ -60,6 +60,7 @@
     <Compile Include="Booking.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\Bookings.cs" />
     <Compile Include="Database\Guests.cs" />
     <Compile Include="Database\ModelCalls.cs" />
     <Compile Include="Database\Rooms.cs" />
@@ -102,6 +103,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HotelDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HotelDataSet7.cs">
+      <DependentUpon>HotelDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HotelDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -216,6 +225,17 @@
     </None>
     <None Include="HotelDataSet4.xss">
       <DependentUpon>HotelDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet7.xsc">
+      <DependentUpon>HotelDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataSet7.xss">
+      <DependentUpon>HotelDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>

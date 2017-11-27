@@ -34,6 +34,7 @@
           <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" />
           <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
           <Property Name="City" Type="nvarchar" MaxLength="50" />
@@ -223,6 +224,7 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Billings" Relationship="HotelModel.FK_Billings_Guests" FromRole="Guest" ToRole="Billing" />
           <NavigationProperty Name="Bookings" Relationship="HotelModel.FK_Bookings_Guests" FromRole="Guest" ToRole="Booking" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -340,6 +342,7 @@
           <EntitySetMapping Name="Guests">
             <EntityTypeMapping TypeName="HotelModel.Guest">
               <MappingFragment StoreEntitySet="Guests">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Mobile" ColumnName="Mobile" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
