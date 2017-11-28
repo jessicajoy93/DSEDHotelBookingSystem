@@ -70,5 +70,27 @@ namespace DSEDHotelBookingSystem.Database
                 context.SaveChanges();
             }
         }
+
+        public IEnumerable AllBookings()
+        {
+            using (var context = new HotelEntities())
+            {
+                var alldata = from b in context.Bookings
+                              where b.GuestIDFK == b.Guest.GuestID && b.RoomIDFK == b.Room.RoomID
+                              orderby b.RoomIDFK
+                              select new
+                              {
+                                  b.BookingID,
+                                  b.RoomIDFK,
+                                  b.Room.RoomName,
+                                  b.GuestIDFK,
+                                  b.Guest.FullName,
+                                  b.NumOfGuests,
+                                  b.CheckIn,
+                                  b.CheckOut
+                              };
+                return alldata.ToList();
+            }
+        }
     }
 }

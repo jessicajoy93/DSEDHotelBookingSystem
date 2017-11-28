@@ -10,11 +10,6 @@ namespace DSEDHotelBookingSystem.Database
 {
     class Guests
     {
-        public Guests()
-        {
-
-        }
-
         public int GuestID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

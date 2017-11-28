@@ -193,12 +193,33 @@ namespace DSEDHotelBookingSystem
         #endregion
 
         #region Bookings
-
         private void btnBookings_Click(object sender, EventArgs e)
         {
             HideTabHeaders();
             tabBookings.Visible = true;
-            Date();
+
+            AllBookings();
+            BookingsDgvColumnHeaders();
+        }
+
+        private void BookingsDgvColumnHeaders()
+        {
+            dgvBookings.Columns[0].HeaderText = "Booking ID";
+            dgvBookings.Columns[1].HeaderText = "Room ID";
+            dgvBookings.Columns[2].HeaderText = "Room Name";
+            dgvBookings.Columns[3].HeaderText = "Guest ID";
+            dgvBookings.Columns[4].HeaderText = "Guest Name";
+            dgvBookings.Columns[5].HeaderText = "Total Guests";
+            dgvBookings.Columns[6].HeaderText = "Check In";
+            dgvBookings.Columns[7].HeaderText = "Check Out";
+
+
+            dgvBookings.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void AllBookings()
+        {
+            dgvBookings.DataSource = myBookings.AllBookings();
         }
 
         private void Date()
@@ -212,6 +233,7 @@ namespace DSEDHotelBookingSystem
         {
             AvailableRoomsValues();
             AvailableRooms();
+            btnBook.Visible = true;
 
         }
 
@@ -227,6 +249,14 @@ namespace DSEDHotelBookingSystem
         {
             myBookings.GuestID = (int)cbxGuestName.SelectedValue;
             myBookings.NumOfGuests = Convert.ToInt32(nudNumOfGuests.Text);
+
+        }
+
+        private void AvailableRoomDetails()
+        {
+            myBookings.RoomID = Convert.ToInt32(lblAvailableRoomID.Text);
+            myBookings.CheckIn = dateCheckIn.Value;
+            myBookings.CheckOut = dateCheckOut.Value;
         }
 
         private void dateCheckIn_ValueChanged(object sender, EventArgs e)
@@ -290,7 +320,6 @@ namespace DSEDHotelBookingSystem
         private void cbxViewRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboboxViewRoomsSelected();
-
         }
 
         private void ComboboxViewRoomsSelected()
@@ -515,9 +544,10 @@ namespace DSEDHotelBookingSystem
             tabHome.Visible = false;
             tabRooms.Visible = false;
             tabBillings.Visible = false;
-            tabBookings.Visible = false;
+            tabAvailableRooms.Visible = false;
             tabGuest.Visible = false;
             tabRoomTypes.Visible = false;
+            tabBookings.Visible = false;
         }
 
         #endregion
@@ -623,23 +653,26 @@ namespace DSEDHotelBookingSystem
 
         private void InsertOrUpdateBooking()
         {
-            if (lblAvailableRoomID.Text == "")
-            {
-                //Insert Room
-                AvailableRoomsValues();
-                myBookings.NewBooking();
-                AvailableRooms();
+            if (lblAvailableRoomID.Text == "") return;
+            //Insert Room
+            AvailableRoomsValues();
+            AvailableRoomDetails();
+            myBookings.NewBooking();
 
-            }
-            //else if (lblAvailableRoomID.Text != "")
-            //{
-            //    //Update Room
-            //    NewRoomValues();
-            //    RoomID();
-            //    myRooms.UpdateRoom();
-            //    ComboboxViewRoomsSelected();
-            //    ResetRoom();
-            //}
+            HideTabHeaders();
+            tabBookings.Visible = true;
+
+            AllBookings();
+
         }
+
+        private void btnSearchBookings_Click(object sender, EventArgs e)
+        {
+            HideTabHeaders();
+            tabAvailableRooms.Visible = true;
+            Date();
+        }
+
+
     }
 }
