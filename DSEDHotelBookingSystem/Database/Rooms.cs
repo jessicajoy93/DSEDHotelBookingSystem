@@ -7,6 +7,8 @@ namespace DSEDHotelBookingSystem.Database
 {
     class Rooms
     {
+        HotelEntities _context = new HotelEntities();
+
         public int RoomID { get; set; }
         public string RoomName { get; set; }
         public int SingleBeds { get; set; }
@@ -15,12 +17,11 @@ namespace DSEDHotelBookingSystem.Database
         public int Cost { get; set; }
         public int RoomType { get; set; }
 
-
         #region Types of Rooms
         public IEnumerable AllRooms()
         {
-            //What ever we want our code to do we do it in here
             //Pass our fields across to a vairiable
+            //var allRooms = _context.Rooms.OrderBy(r => r.Cost);
             using (var context = new HotelEntities())
             {
                 var alldata = from r in context.Rooms
@@ -36,9 +37,9 @@ namespace DSEDHotelBookingSystem.Database
                                   r.Cost,
                                   r.RoomType.Room_Type
                               };
-
                 return alldata.ToList();
             }
+
         }
 
         public IEnumerable SingleRooms()

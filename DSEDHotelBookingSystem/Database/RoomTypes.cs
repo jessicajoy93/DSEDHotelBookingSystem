@@ -10,29 +10,23 @@ namespace DSEDHotelBookingSystem.Database
 {
     class RoomTypes
     {
+        HotelEntities _context = new HotelEntities();
+
         public int RoomTypeID { get; set; }
         public string Room_Type { get; set; }
 
         public IEnumerable RoomType()
         {
-            //What ever we want our code to do we do it in here
             //Pass our fields across to a vairiable
-            using (var context = new HotelEntities())
-            {
-                var alldata = from rt in context.RoomTypes
-                              select new
-                              {
-                                  rt.RoomTypeID,
-                                  rt.Room_Type
-                              };
-                return alldata.ToList();
-            }
+            var allRoomTypes = _context.RoomTypes.OrderBy(r => r.RoomTypeID);
+            return allRoomTypes.ToList();
         }
 
         public void InsertRoomType()
         {
             using (var context = new HotelEntities())
             {
+
                 var rt = new RoomType();
                 rt.Room_Type = Room_Type;
 

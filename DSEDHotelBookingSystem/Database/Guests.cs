@@ -10,6 +10,9 @@ namespace DSEDHotelBookingSystem.Database
 {
     class Guests
     {
+        private HotelEntities _context = new HotelEntities();
+
+
         public int GuestID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -24,28 +27,11 @@ namespace DSEDHotelBookingSystem.Database
         public string Email { get; set; }
 
 
-
         public IEnumerable AllGuests()
         {
-            using (var context = new HotelEntities())
-            {
-                var alldata = from g in context.Guests
-                              select new
-                              {
-                                  g.GuestID,
-                                  g.FirstName,
-                                  g.LastName,
-                                  g.Address,
-                                  g.Suburb,
-                                  g.City,
-                                  g.Postcode,
-                                  g.Country,
-                                  g.Phone,
-                                  g.Mobile,
-                                  g.Email
-                              };
-                return alldata.ToList();
-            }
+            var allGuests = _context.Guests.OrderBy(r => r.LastName);
+            return allGuests.ToList();
+
         }
 
         public void InsertGuest()

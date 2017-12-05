@@ -60,9 +60,9 @@
     <Compile Include="Booking.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\Billings.cs" />
     <Compile Include="Database\Bookings.cs" />
     <Compile Include="Database\Guests.cs" />
-    <Compile Include="Database\ModelCalls.cs" />
     <Compile Include="Database\Rooms.cs" />
     <Compile Include="Database\RoomTypes.cs" />
     <Compile Include="Form1.cs">

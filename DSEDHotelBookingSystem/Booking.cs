@@ -20,6 +20,9 @@ namespace DSEDHotelBookingSystem
         public Nullable<int> NumOfGuests { get; set; }
         public Nullable<System.DateTime> CheckIn { get; set; }
         public Nullable<System.DateTime> CheckOut { get; set; }
+        public Nullable<int> TotalNights { get; set; }
+        public Nullable<bool> LateCheckOut { get; set; }
+        public Nullable<bool> Wifi { get; set; }
     
         public virtual Guest Guest { get; set; }
         public virtual Room Room { get; set; }

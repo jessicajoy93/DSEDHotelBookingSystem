@@ -17,8 +17,8 @@ namespace DSEDHotelBookingSystem
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Room()
         {
-            this.Billings = new HashSet<Billing>();
             this.Bookings = new HashSet<Booking>();
+            this.Billings = new HashSet<Billing>();
         }
     
         public int RoomID { get; set; }
@@ -29,10 +29,10 @@ namespace DSEDHotelBookingSystem
         public Nullable<int> Cost { get; set; }
         public Nullable<int> RoomTypeIDFK { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Billing> Billings { get; set; }
         public virtual RoomType RoomType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Booking> Bookings { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Billing> Billings { get; set; }
     }
 }

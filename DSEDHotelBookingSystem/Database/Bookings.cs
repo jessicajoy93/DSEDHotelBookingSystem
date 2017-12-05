@@ -10,11 +10,18 @@ namespace DSEDHotelBookingSystem.Database
 {
     class Bookings
     {
+        Rooms myRoom = new Rooms();
+        HotelEntities _context = new HotelEntities();
+
         public int RoomID { get; set; }
         public int GuestID { get; set; }
         public int NumOfGuests { get; set; }
+        public int Cost { get; set; }
+        public int TotalCost { get; set; }
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
+        public int TotalDays { get; set; }
+
 
         public IEnumerable AllAvailableRooms()
         {
@@ -56,6 +63,8 @@ namespace DSEDHotelBookingSystem.Database
 
         public void NewBooking()
         {
+            //try
+            //{
             using (var context = new HotelEntities())
             {
                 var b = new Booking();
@@ -65,16 +74,54 @@ namespace DSEDHotelBookingSystem.Database
                 b.CheckIn = CheckIn;
                 b.CheckOut = CheckOut;
 
-
                 context.Bookings.Add(b);
                 context.SaveChanges();
+
+                //var BookedConfirmationMessage = Environment.NewLine + "You have booked Room " + b.RoomIDFK +
+                //                                                                    Environment.NewLine + "From " + b.CheckIn + " to " + b.CheckOut +
+                //                                                                    Environment.NewLine + "For " +
+                //                                                                    (string.Format("{0:C}", Cost) + " X " + TotalDays + " = " + TotalCost);
+                ////Show a confirmation message
+                //MessageBox.Show(BookedConfirmationMessage);
+
             }
+            //}
+            //catch (Exception e)
+            //{
+            //    MessageBox.Show(e.ToString());
+            //}
+
+        }
+
+        public void CalculateTotalDays()
+        {
+            TotalDays = (int)(CheckOut - CheckIn).TotalDays;
+        }
+
+        public void CalculateTotalCost()
+        {
+            Cost = myRoom.Cost;
+            TotalCost = Cost * TotalDays;
         }
 
         public IEnumerable AllBookings()
         {
             using (var context = new HotelEntities())
             {
+                //var allbookings = _context.Bookings.OrderBy(b => b.BookingID)
+                //    .Where(b => b.GuestIDFK == b.Guest.GuestID)
+                //    .Where(b => b.RoomIDFK == b.Room.RoomID)
+                //    .Select(b => b.BookingID);
+                //.Select(b => b.RoomIDFK);
+                //b => b.Room.RoomName, b => b.GuestIDFK,
+                //    b => b.Guest.FullName, b => b.NumOfGuests, b => b.CheckIn, b => b.CheckOut);
+
+                //where 
+                //return allbookings.ToList();
+
+                //var allGuests = _context.Guests.OrderBy(r => r.LastName);
+                //return allGuests.ToList();
+
                 var alldata = from b in context.Bookings
                               where b.GuestIDFK == b.Guest.GuestID && b.RoomIDFK == b.Room.RoomID
                               orderby b.RoomIDFK

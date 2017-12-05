@@ -14,11 +14,10 @@ namespace DSEDHotelBookingSystem
 {
     public partial class Form1 : Form
     {
-        ModelCalls myDatabase = new ModelCalls();
-        Rooms myRooms = new Rooms();
-        RoomTypes myRoomTypes = new RoomTypes();
-        Guests myGuests = new Guests();
-        Bookings myBookings = new Bookings();
+        Database.Rooms myRooms = new Database.Rooms();
+        Database.RoomTypes myRoomTypes = new Database.RoomTypes();
+        Database.Guests myGuests = new Database.Guests();
+        Database.Bookings myBookings = new Database.Bookings();
 
         public Form1()
         {
@@ -26,8 +25,6 @@ namespace DSEDHotelBookingSystem
             TabControlHeaderHidden();
             HideTabHeaders();
             tabHome.Visible = true;
-
-
         }
 
         #region Tab Control Header Hidden
@@ -182,16 +179,6 @@ namespace DSEDHotelBookingSystem
 
         #endregion
 
-        #region Billings
-
-        private void btnBillings_Click(object sender, EventArgs e)
-        {
-            HideTabHeaders();
-            tabBillings.Visible = true;
-        }
-
-        #endregion
-
         #region Bookings
         private void btnBookings_Click(object sender, EventArgs e)
         {
@@ -234,7 +221,6 @@ namespace DSEDHotelBookingSystem
             AvailableRoomsValues();
             AvailableRooms();
             btnBook.Visible = true;
-
         }
 
         public void AvailableRooms()
@@ -264,6 +250,36 @@ namespace DSEDHotelBookingSystem
             Date();
         }
 
+        private void btnBook_Click(object sender, EventArgs e)
+        {
+            InsertOrUpdateBooking();
+            myBookings.CalculateTotalDays();
+            myBookings.CalculateTotalCost();
+        }
+
+        private void InsertOrUpdateBooking()
+        {
+            if (lblAvailableRoomID.Text == "") return;
+            //Insert Room
+            AvailableRoomsValues();
+            AvailableRoomDetails();
+            //myBookings.BookRoom();
+            myBookings.NewBooking();
+
+            HideTabHeaders();
+            tabBookings.Visible = true;
+
+            AllBookings();
+
+        }
+
+        private void btnSearchBookings_Click(object sender, EventArgs e)
+        {
+            HideTabHeaders();
+            tabAvailableRooms.Visible = true;
+            Date();
+        }
+
         #endregion
 
         #region Rooms
@@ -281,6 +297,8 @@ namespace DSEDHotelBookingSystem
             dgvRooms.DataSource = myRooms.AllRooms();
 
             RoomsDgvColumnHeaders();
+
+            //dgvTables = mySetup.LoadRoomsTable();
         }
 
         private void RoomsDgvColumnHeaders()
@@ -475,6 +493,7 @@ namespace DSEDHotelBookingSystem
                     //Insert Room
                     NewRoomTypeValues();
                     RoomTypeDataValidation();
+                    RoomType();
                 }
                 else if (lblRoomTypeID.Text != "")
                 {
@@ -543,7 +562,6 @@ namespace DSEDHotelBookingSystem
         {
             tabHome.Visible = false;
             tabRooms.Visible = false;
-            tabBillings.Visible = false;
             tabAvailableRooms.Visible = false;
             tabGuest.Visible = false;
             tabRoomTypes.Visible = false;
@@ -644,34 +662,10 @@ namespace DSEDHotelBookingSystem
 
 
 
+
+
+
         #endregion
-
-        private void btnBook_Click(object sender, EventArgs e)
-        {
-            InsertOrUpdateBooking();
-        }
-
-        private void InsertOrUpdateBooking()
-        {
-            if (lblAvailableRoomID.Text == "") return;
-            //Insert Room
-            AvailableRoomsValues();
-            AvailableRoomDetails();
-            myBookings.NewBooking();
-
-            HideTabHeaders();
-            tabBookings.Visible = true;
-
-            AllBookings();
-
-        }
-
-        private void btnSearchBookings_Click(object sender, EventArgs e)
-        {
-            HideTabHeaders();
-            tabAvailableRooms.Visible = true;
-            Date();
-        }
 
 
     }
