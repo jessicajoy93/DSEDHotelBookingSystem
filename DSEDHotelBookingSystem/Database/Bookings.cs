@@ -96,6 +96,7 @@ namespace DSEDHotelBookingSystem.Database
         public void CalculateTotalDays()
         {
             TotalDays = (int)(CheckOut - CheckIn).TotalDays;
+
         }
 
         public void CalculateTotalCost()
